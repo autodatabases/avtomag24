@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Avtomag24-test</title>
+	<link rel="shortcut icon" href="https://avtomag24.com.ua/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="https://avtomag24.com.ua/favicon.ico" type="image/x-icon">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="https://avtomag24.com.ua/images/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="https://avtomag24.com.ua/images/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="https://avtomag24.com.ua/images/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="https://avtomag24.com.ua/images/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="https://avtomag24.com.ua/images/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://avtomag24.com.ua/images/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="https://avtomag24.com.ua/images/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://avtomag24.com.ua/images/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://avtomag24.com.ua/images/favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="https://avtomag24.com.ua/images/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="https://avtomag24.com.ua/images/favicons/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="https://avtomag24.com.ua/images/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="https://avtomag24.com.ua/images/favicons/manifest.json">
+	<link rel="mask-icon" href="https://avtomag24.com.ua/images/favicons/safari-pinned-tab.svg" color="#c62828">
+	<meta name="msapplication-TileColor" content="#b71c1c">
+	<meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+
+	<link rel="stylesheet" type="text/css" href="_syscss/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="_syscss/style.min.css">
+	<link rel="stylesheet" type="text/css" href="_syslib/tinybox.css">
+	<link rel="stylesheet" type="text/css" href="_syslib/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="_css/client_styles.css">
+	<script src="_syslib/jquery-1.11.min.js"></script>
+	<script src="_syslib/lib.common.min.js"></script>
+	<script src="_syslib/tinybox.min.js"></script>
+	<script src="_client-side/cf.js"></script>
+	<script src="_syslib/bootstrap.min.js"></script>
+	<script src="_client-side/fixed-search-thead.js"></script>
+	<script src="_client-side/script.js"></script>
+	<script src="_syslib/search.js"></script>
+	<script src="_syslib/DateTimeBox.min.js"></script>
+	<script src="_syslib/tinybox.js"></script>
+	<script src="_syslib/DropDownList.min.js"></script>
+	<script src="_syslib/owl.carousel.min.js"></script>
+	<!-- <script src="_syslib/ulogin.js"></script> -->
+	<script src="_syslib/Form.min.js"></script>
+	<script type="text/javascript">
+		jqWar(document).ready(function () {
+			jqWar('#search_input input[name=article]').after('<input type="hidden" name="smart_search" value="1" />');
+		});
+	</script>
+
+	<script>
+		var jsTr = { 'Ещё': 'Еще', 'Добавление в корзину...': 'Добавление в корзину...', 'Заказано': 'Заказано' };
+	</script>
+
+</head>
+
+<body>
+	<div class="shadow"></div>
+	<div id="page" class="wrapper">
+		<div class="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 header__wrapper">
+						<div class="header__contact-wrapper">
+							<div class="contact-details contact-details_top">
+								<div class="contact-details__item">
+									<div class="select-stock-point" id="select-stock-point">
+										<svg class="select-stock-point__icon">
+											<use xlink:href="/_sysimg/svg/contacts-sprite.svg#address"></use>
+										</svg>
+										<button class="select-stock-point__show" type="button">
+											<span class="contact-details__value" data-contact-prop="address">Николаев, ул. Пушкинская 54/1</span>
+											<svg class="select-stock-point__show-icon">
+												<use xlink:href="/_sysimg/svg/ui.svg#arrow"></use>
+											</svg>
+										</button>
+										<div id="select-stock-point-list" class="select-stock-point__drop">
+											<div class="select-stock-point__header">Выберите торговую точку:</div>
+											<div class="select-stock-point__container">
+												<div class="select-stock-point__list">
+													<div class="select-stock-point__item"><input type="radio" value="item.id" id="1" name="select-stock" class="select-stock-point__radio">
+														<label for="1" class="select-stock-point__label"><span class="select-stock-point__address">Головной офис</span>
+															<span class="select-stock-point__value">Николаев, ул. Пушкинская 54/1</span> <span class="select-stock-point__value">Пн.
+																- Пт.: 9-17</span><span class="select-stock-point__value">Сб.: 9-15</span><span class="select-stock-point__value">Вс.:
+																выходной</span><span class="select-stock-point__value">Тел.: +38(096)541-00-41 +38(073)541-00-41</span>
+															<button type="button" class="select-stock-point__show-map">Показать на карте</button></label></div>
+												</div>
+												<div class="select-stock-point__map"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="contact-details__item">
+									<svg class="contact-details__icon">
+										<use xlink:href="/_sysimg/svg/contacts-sprite.svg#phone"></use>
+									</svg>
+									<div class="contact-details__value" data-contact-prop="phone">+38(096)541-00-41 +38(073)541-00-41</div>
+								</div>
+								<div class="contact-details__item">
+									<svg class="contact-details__icon">
+										<use xlink:href="/_sysimg/svg/contacts-sprite.svg#email"></use>
+									</svg>
+									<div class="contact-details__value" data-contact-prop="email">admin@avtomag24.com.ua</div>
+								</div>
+							</div>
+						</div>
+						<div class="header__right-wrapper">
+							<div class="select-country ">
+								<div class="select-country__container">
+									<button class="select-country__button btn btn_view_pseudo" title="сейчас выбран этот язык">
+										<svg class="select-country__icon">
+											<use xlink:href="/_sysimg/svg/ui.svg#language">
+											</use>
+										</svg>
+										<span class="select-country__name">Русский</span>
+									</button>
+									<div class="select-country__inner-container">
+										<a class="select-country__item" href="https://avtomag24.com.ua/?change-lng=en" title="переключить язык клиентской части на английский">
+											<span class="select-country__name">Английский</span>
+										</a>
+										<a class="select-country__item" href="https://avtomag24.com.ua/?change-lng=ua" title="переключить язык клиентской части на украинский">
+											<span class="select-country__name">Украинский</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="header__user-info">
+								<a class="btn" data-toggle="modal" data-target="#myModal">Войти</a>
+								<a class="btn btn_view_common header__reg-button" href="https://avtomag24.com.ua/registration.html">Регистрация</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="header-nav">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="header-nav__wrapper">
+							<a href="/" class="header-nav__logo" title="На главную страницу avtomag24.com.ua">
+								<img class="header-nav__picture header-nav__picture_svg" src="img/logo.svg" alt="Avtomag24">
+							</a>
+							<!--Begin Кнопка для показа меню-->
+							<button class="btn-mobile header-nav__btn-mobile">
+								<span class="btn-mobile__line"></span>
+							</button>
+							<!--End Кнопка для показа меню-->
+							<div class="header-nav__user-info header__user-info_mobile">
+								<a class="btn" data-toggle="modal" data-target="#myModal">Войти</a>
+								<a class="btn btn_view_common header__reg-button" href="https://avtomag24.com.ua/registration.html">Регистрация</a>
+							</div>
+							<div class="header-nav__menu">
+								<!--Begin Основное меню-->
+								<ul class="top-nav">
+									<li class="top-nav__item top-nav__item--sub">
+										<a class="top-nav__link" href="https://avtomag24.com.ua/#">Новым клиентам</a>
+										<ul class="top-menu-sub">
+
+											<li class="top-menu-sub__item">
+												<a class="top-menu-sub__link" href="https://avtomag24.com.ua/how-to-search-part/">Как найти деталь</a>
+											</li>
+
+											<li class="top-menu-sub__item last">
+												<a class="top-menu-sub__link" href="https://avtomag24.com.ua/how-to-order/">Как сделать заказ</a>
+											</li>
+										</ul>
+									</li>
+									<li class="top-nav__item">
+										<a class="top-nav__link" href="https://avtomag24.com.ua/pay/">Оплата</a>
+									</li>
+									<li class="top-nav__item">
+										<a class="top-nav__link" href="https://avtomag24.com.ua/delivery/">Доставка</a>
+									</li>
+									<li class="top-nav__item">
+										<a class="top-nav__link" href="https://avtomag24.com.ua/stocks/">Контакты</a>
+									</li>
+									<li class="top-nav__item">
+										<a class="top-nav__link" href="https://avtomag24.com.ua/questions/">Вопрос-ответ</a>
+									</li>
+									<li class="top-nav__item">
+										<a class="top-nav__link" href="https://avtomag24.com.ua/feedbacks/">Отзывы</a>
+									</li>
+								</ul>
+								<!--End Основное меню-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="header-catalog" style="height: auto;">
+			<div class="header-catalog__panel">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 header-catalog__wrapper">
+							<form class="search-form  header-catalog__search-form" name="search_code" action="https://avtomag24.com.ua/search.html"
+							 method="GET">
+								<div id="search_input" class="search-form__container">
+									<!----> <input class="search-form__input" type="text" name="article" value="" placeholder="Поиск по артикулу, бренду, наименованию"
+									 autocomplete="off"><input type="hidden" name="smart_search" value="1">
+
+									<input type="hidden" name="brand">
+
+									<div class="search-setting search-form__settings">
+										<button type="button" id="search-setting-toggle" class=" search-setting__icon search-setting__icon--svg">
+											<svg class="search-setting__icon-svg">
+												<use xlink:href="/_sysimg/svg/ui.svg#settings"></use>
+											</svg>
+										</button>
+										<div class="search-setting__options">
+											<div id="search-full" class="search-full">
+												<div class="search-full__col">
+													<div class="search-full__title">Вид результатов поиска:</div>
+													<div id="searchTemplate" class="search-full__template">
+														<input id="searchTemplateDefault" type="radio" name="st" value="default" checked="checked">
+														<label class="search-full__label" for="searchTemplateDefault">классический</label>
+														<input id="searchTemplateGroups" type="radio" name="st" value="groups">
+														<label class="search-full__label" for="searchTemplateGroups">сгруппированный</label>
+													</div>
+													<div class="search-full__smode">
+														<input type="checkbox" name="chk_smode" class="search-full__chk-smode" id="chk_smode" checked="checked">
+														<label class="search-full__smode-label" for="chk_smode">Искать аналоги</label>
+													</div>
+													<input type="hidden" name="smode" id="smode" value="A">
+													<input type="hidden" name="sort___search_results_by" id="sort___search_results_by" value="final_price">
+												</div>
+
+												<div class="search-full__col">
+													<div class="search-full__title">Срок поставки:</div>
+													<div class="search-full__term-select">
+														<div class="btn-group bootstrap-select"><button type="button" class="btn dropdown-toggle btn-default"
+															 data-toggle="dropdown" role="button" data-id="term" title="не важен"><span class="filter-option pull-left">не
+																	важен</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button>
+															<div class="dropdown-menu open" role="combobox">
+																<ul class="dropdown-menu inner" role="listbox" aria-expanded="false">
+																	<li data-original-index="0" class="selected"><a tabindex="0" class="" data-tokens="null" role="option"
+																		 aria-disabled="false" aria-selected="true"><span class="text">не важен</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+																	<li data-original-index="1"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false"
+																		 aria-selected="false"><span class="text">до 10 дней</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+																	<li data-original-index="2"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false"
+																		 aria-selected="false"><span class="text">до 8-ми дней</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+																	<li data-original-index="3"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false"
+																		 aria-selected="false"><span class="text">до 5 дней</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+																	<li data-original-index="4"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false"
+																		 aria-selected="false"><span class="text">до 3-х дней</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+																	<li data-original-index="5"><a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false"
+																		 aria-selected="false"><span class="text">1 день</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+																</ul>
+															</div><select id="term" name="term" class="" tabindex="-98">
+																<option value="0">не важен</option>
+																<option value="10">до 10 дней</option>
+																<option value="8">до 8-ми дней</option>
+																<option value="5">до 5 дней</option>
+																<option value="3">до 3-х дней</option>
+																<option value="1">1 день</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<button class="search-form__submit  search-form__submit--svg" type="submit" name="search" title="найти">
+										<svg class="search-form__submit-svg">
+											<use xlink:href="/_sysimg/svg/ui.svg#search"></use>
+										</svg>
+									</button>
+								</div>
+								<div class="search-form__live">
+									<div class="search-live" id="vue-search-autocomplete" style="display: none;">
+										<div v-show="loading" id="loading_search"></div>
+										<div class="search-live__scroll" v-if="showResults &amp;&amp; searchResultsProcessed.length"
+										 v-on-click-outside="clickOutside">
+											<div class="search-live__inner">
+												<table class="search-live__table">
+													<tbody>
+														<tr class="search-live__row" v-for="item in searchResultsProcessed" v-on:click="ajaxSearch(item.indexId)">
+															<template v-if="item.source === &#39;more&#39; || item.source === &#39;vin&#39; || item.source === &#39;vin2&#39;"></template>
+															<template v-else=""></template>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+							<div class="header-catalog__right">
+
+
+								<a class="order-amount header-catalog__basket" href="https://avtomag24.com.ua/shop/basket.html" data-field="module-basket">
+									<span class="order-amount__count" data-field="module-basket-count">0</span>
+									<span class="hidden-xs">
+										<span data-field="module-basket-sum">0.00</span>
+										<span class="order-amount__unit">грн</span>
+									</span>
+								</a>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="breadcrumbs-line" class="breadcrumbs-line" style="display: none">
+			<div class="container">
+				<div class="row">
+					<div id="breadcrumbs-list" class="col-xs-12">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content">
+
+			<div id="content_inner" class="container  ">
+				<div class="row">
+					<div class="col-xs-12 content-page__main-slider">
+						<div id="main-slider" class="main-slider">
+							<div class="main-slider__carousel owl-carousel owl-loaded owl-drag">
+
+								<div class="owl-stage-outer">
+									<div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1230px;">
+										<div class="owl-item active" style="width: 1230px;">
+											<div class="main-slider__item" style="background-image: url(/_upload/slides/slide2.jpg);">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev disabled"><span
+										 aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next disabled"><span
+										 aria-label="Next">›</span></button></div>
+								<div class="owl-dots disabled"><button role="button" class="owl-dot active"><span></span></button></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<h1>Avtomag24.com.ua Интернет-магазин автозапчастей</h1>
+						<!--Своя разметка для определенного типа контента-->
+
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-8">
+								<div id="client-catalog-tabs" class="accordion-tabs">
+									<div class="accordion-tabs__list accordion-tabs__list--no-tabs">
+										<button class="accordion-tabs__link accordion-tabs__link--active" role="tab">CatCar Aftermarket</button>
+									</div>
+
+									<div class="accordion-tabs__area" role="tabpanel" tab-index="0" aria-selected="true">
+										<div class="accordion-tab">
+											<div class="brand-catalog-list accordion-tab__grid">
+												<div class="brand-catalog-list__wrapper">
+													<div class="brand-catalog-list__group">
+														<div class="brand-catalog-list__group-key">A</div>
+														<ul class="brand-catalog-list__list">
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/AUDI(504)/" class="brand-catalog-list__link">Audi</a>
+															</li>
+														</ul>
+													</div>
+													<div class="brand-catalog-list__group">
+														<div class="brand-catalog-list__group-key">B</div>
+														<ul class="brand-catalog-list__list">
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/BMW(511)/" class="brand-catalog-list__link">BMW</a>
+															</li>
+														</ul>
+													</div>
+													<div class="brand-catalog-list__group">
+														<div class="brand-catalog-list__group-key">C</div>
+														<ul class="brand-catalog-list__list">
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/CADILLAC(852)/" class="brand-catalog-list__link">Cadillac</a>
+															</li>
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/CHEVROLET(602)/" class="brand-catalog-list__link">Chevrolet</a>
+															</li>
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/CHRYSLER(513)/" class="brand-catalog-list__link">Chrysler</a>
+															</li>
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/CITRO%C3%8BN(514)/" class="brand-catalog-list__link">Citroen</a>
+															</li>
+														</ul>
+													</div>
+													<div class="brand-catalog-list__group">
+														<div class="brand-catalog-list__group-key">D</div>
+														<ul class="brand-catalog-list__list">
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/DAEWOO(649)/" class="brand-catalog-list__link">Daewoo</a>
+															</li>
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/DODGE(521)/" class="brand-catalog-list__link">Dodge</a>
+															</li>
+														</ul>
+													</div>
+													<div class="brand-catalog-list__group">
+														<div class="brand-catalog-list__group-key">F</div>
+														<ul class="brand-catalog-list__list">
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/FIAT(524)/" class="brand-catalog-list__link">Fiat</a>
+															</li>
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/FORD(525)/" class="brand-catalog-list__link">Ford</a>
+															</li>
+														</ul>
+													</div>
+													<div class="brand-catalog-list__group">
+														<div class="brand-catalog-list__group-key">G</div>
+														<ul class="brand-catalog-list__list">
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/GEELY(10091)/" class="brand-catalog-list__link">Geely</a>
+															</li>
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/GREAT_WALL(10405)/" class="brand-catalog-list__link">Great
+																	Wall</a>
+															</li>
+														</ul>
+													</div>
+													<div class="brand-catalog-list__group">
+														<div class="brand-catalog-list__group-key">H</div>
+														<ul class="brand-catalog-list__list">
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/HONDA(533)/" class="brand-catalog-list__link">Honda</a>
+															</li>
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/HUMMER(1214)/" class="brand-catalog-list__link">Hummer</a>
+															</li>
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/HYUNDAI(647)/" class="brand-catalog-list__link">Hyundai</a>
+															</li>
+														</ul>
+													</div>
+													<div class="brand-catalog-list__group">
+														<div class="brand-catalog-list__group-key">I</div>
+														<ul class="brand-catalog-list__list">
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/INFINITI(1234)/" class="brand-catalog-list__link">Infiniti</a>
+															</li>
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/ISUZU(538)/" class="brand-catalog-list__link">Isuzu</a>
+															</li>
+														</ul>
+													</div>
+													<div class="brand-catalog-list__group">
+														<div class="brand-catalog-list__group-key">J</div>
+														<ul class="brand-catalog-list__list">
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/JAGUAR(540)/" class="brand-catalog-list__link">Jaguar</a>
+															</li>
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/JEEP(910)/" class="brand-catalog-list__link">Jeep</a>
+															</li>
+														</ul>
+													</div>
+													<div class="brand-catalog-list__group">
+														<div class="brand-catalog-list__group-key">K</div>
+														<ul class="brand-catalog-list__list">
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/KIA(648)/" class="brand-catalog-list__link">Kia</a>
+															</li>
+														</ul>
+													</div>
+													<div class="brand-catalog-list__group">
+														<div class="brand-catalog-list__group-key">L</div>
+														<ul class="brand-catalog-list__list">
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/LADA(545)/" class="brand-catalog-list__link">Lada</a>
+															</li>
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/LANCIA(546)/" class="brand-catalog-list__link">Lancia</a>
+															</li>
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/LAND_ROVER(1292)/" class="brand-catalog-list__link">Land
+																	Rover</a>
+															</li>
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/LEXUS(874)/" class="brand-catalog-list__link">Lexus</a>
+															</li>
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/LINCOLN(1152)/" class="brand-catalog-list__link">Lincoln</a>
+															</li>
+														</ul>
+													</div>
+													<div class="brand-catalog-list__group">
+														<div class="brand-catalog-list__group-key">M</div>
+														<ul class="brand-catalog-list__list">
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/MAN(551)/" class="brand-catalog-list__link">Man</a>
+															</li>
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/MAZDA(552)/" class="brand-catalog-list__link">Mazda</a>
+															</li>
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/MERCEDES-BENZ(553)/" class="brand-catalog-list__link">Mercedes</a>
+															</li>
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/MINI(1231)/" class="brand-catalog-list__link">Mini</a>
+															</li>
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/MITSUBISHI(555)/" class="brand-catalog-list__link">Mitsubishi</a>
+															</li>
+														</ul>
+													</div>
+													<div class="brand-catalog-list__group">
+														<div class="brand-catalog-list__group-key">N</div>
+														<ul class="brand-catalog-list__list">
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/NISSAN(558)/" class="brand-catalog-list__link">Nissan</a>
+															</li>
+														</ul>
+													</div>
+													<div class="brand-catalog-list__group">
+														<div class="brand-catalog-list__group-key">O</div>
+														<ul class="brand-catalog-list__list">
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/OPEL(561)/" class="brand-catalog-list__link">Opel</a>
+															</li>
+														</ul>
+													</div>
+													<div class="brand-catalog-list__group">
+														<div class="brand-catalog-list__group-key">P</div>
+														<ul class="brand-catalog-list__list">
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/PEUGEOT(563)/" class="brand-catalog-list__link">Peugeot</a>
+															</li>
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/PORSCHE(565)/" class="brand-catalog-list__link">Porsche</a>
+															</li>
+														</ul>
+													</div>
+													<div class="brand-catalog-list__group">
+														<div class="brand-catalog-list__group-key">R</div>
+														<ul class="brand-catalog-list__list">
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/RENAULT(566)/" class="brand-catalog-list__link">Renault</a>
+															</li>
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/ROVER(568)/" class="brand-catalog-list__link">Rover</a>
+															</li>
+														</ul>
+													</div>
+													<div class="brand-catalog-list__group">
+														<div class="brand-catalog-list__group-key">S</div>
+														<ul class="brand-catalog-list__list">
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/SKODA(575)/" class="brand-catalog-list__link">Skoda</a>
+															</li>
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/SSANGYONG(639)/" class="brand-catalog-list__link">Ssangyong</a>
+															</li>
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/SUBARU(576)/" class="brand-catalog-list__link">Subaru</a>
+															</li>
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/SUZUKI(577)/" class="brand-catalog-list__link">Suzuki</a>
+															</li>
+														</ul>
+													</div>
+													<div class="brand-catalog-list__group">
+														<div class="brand-catalog-list__group-key">T</div>
+														<ul class="brand-catalog-list__list">
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/TOYOTA(579)/" class="brand-catalog-list__link">Toyota</a>
+															</li>
+														</ul>
+													</div>
+													<div class="brand-catalog-list__group">
+														<div class="brand-catalog-list__group-key">V</div>
+														<ul class="brand-catalog-list__list">
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/VOLVO(586)/" class="brand-catalog-list__link">Volvo</a>
+															</li>
+															<li class="brand-catalog-list__item">
+																<a href="https://avtomag24.com.ua/ccatalogs/totalcatalog/VW(587)/" class="brand-catalog-list__link">VW</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-4">
+								<div class="list-catalog-tile">
+
+									<a class="list-catalog-tile__item list-catalog-tile__item_long_tablet" href="/to/">
+										<span class="list-catalog-tile__content">
+											<span class="list-catalog-tile__title">Запчасти ТО</span>
+											<span class="list-catalog-tile__description">Товаров: 5760</span>
+										</span>
+										<i class="list-catalog-tile__icon list-catalog-tile__icon_type_spark"></i>
+										<img class="list-catalog-tile__image" src="/_upload/dc_links/11493989277.jpg" alt="Запчасти ТО">
+									</a>
+									<a class="list-catalog-tile__item list-catalog-tile__item_long_tablet" href="/tires-discs-search/">
+										<span class="list-catalog-tile__content">
+											<span class="list-catalog-tile__title">Шины и диски</span>
+											<span class="list-catalog-tile__description"></span>
+										</span>
+										<i class="list-catalog-tile__icon list-catalog-tile__icon_type_wheel"></i>
+										<img class="list-catalog-tile__image" src="/_upload/dc_links/11493989329.jpg" alt="Шины и диски">
+									</a>
+									<a class="list-catalog-tile__item list-catalog-tile__item_long_desktop" href="/oil/">
+										<span class="list-catalog-tile__content">
+											<span class="list-catalog-tile__title">Масла</span>
+											<span class="list-catalog-tile__description">Товаров: 84</span>
+										</span>
+										<i class="list-catalog-tile__icon list-catalog-tile__icon_type_oil"></i>
+										<img class="list-catalog-tile__image" src="/_upload/dc_links/11493989362.jpg" alt="Масла">
+									</a>
+									<a class="list-catalog-tile__item list-catalog-tile__item_long_tablet" href="/accessories/">
+										<span class="list-catalog-tile__content">
+											<span class="list-catalog-tile__title">Аксессуары</span>
+											<span class="list-catalog-tile__description">Товаров: 52684</span>
+										</span>
+										<i class="list-catalog-tile__icon list-catalog-tile__icon_type_access"></i>
+										<img class="list-catalog-tile__image" src="/_upload/dc_links/11493989549.jpg" alt="Аксессуары">
+									</a>
+									<a class="list-catalog-tile__item list-catalog-tile__item_long_tablet" href="/avtostekla/">
+										<span class="list-catalog-tile__content">
+											<span class="list-catalog-tile__title">Автостекла</span>
+											<span class="list-catalog-tile__description">Товаров: 9105</span>
+										</span>
+										<i class="list-catalog-tile__icon list-catalog-tile__icon_type_glass"></i>
+										<img class="list-catalog-tile__image" src="/_upload/dc_links/11493989636.jpg" alt="Автостекла">
+									</a>
+									<a class="list-catalog-tile__item list-catalog-tile__item_long_desktop" href="/accum/">
+										<span class="list-catalog-tile__content">
+											<span class="list-catalog-tile__title">АКБ</span>
+											<span class="list-catalog-tile__description">Товаров: 0</span>
+										</span>
+										<i class="list-catalog-tile__icon list-catalog-tile__icon_type_akb"></i>
+										<img class="list-catalog-tile__image" src="/_upload/dc_links/11493989671.jpg" alt="АКБ">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-8">
+								<!--Begin Популярные товары-->
+								<!--End Популярные товары-->
+								<div class="text-decoration content-page">
+								</div>
+							</div>
+							<div class="last-news col-xs-12 col-sm-12 col-md-4">
+								<!--Begin Последние новости-->
+								<!--End Последние новости-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 footer__container">
+						<div class="footer__info-content">
+							<a class="logo-footer footer__logo" href="/" title="На главную страницу avtomag24.com.ua">
+								<img src="img/logo-footer.png" alt="Avtomag24">
+							</a>
+							<div class="footer__contacts">
+								<div class="contact-details contact-details_footer">
+									<div class="contact-details__item">
+										<svg class="contact-details__icon">
+											<use xlink:href="/_sysimg/svg/contacts-sprite.svg#address"></use>
+										</svg>
+										<div class="contact-details__value" data-contact-prop="address">Николаев, ул. Пушкинская 54/1</div>
+									</div>
+									<div class="contact-details__item">
+										<svg class="contact-details__icon">
+											<use xlink:href="/_sysimg/svg/contacts-sprite.svg#phone"></use>
+										</svg>
+										<div class="contact-details__value" data-contact-prop="phone">+38(096)541-00-41 +38(073)541-00-41</div>
+									</div>
+									<div class="contact-details__item">
+										<svg class="contact-details__icon">
+											<use xlink:href="/_sysimg/svg/contacts-sprite.svg#email"></use>
+										</svg>
+										<div class="contact-details__value" data-contact-prop="email">admin@avtomag24.com.ua</div>
+									</div>
+								</div>
+							</div>
+							<div class="payment-methods footer__payments">
+								<div class="payment-methods__item">
+									<svg class="payment-methods__logo">
+										<use xlink:href="/_sysimg/svg/payments-sprite.svg#visa"></use>
+									</svg>
+								</div>
+								<div class="payment-methods__item">
+									<svg class="payment-methods__logo">
+										<use xlink:href="/_sysimg/svg/payments-sprite.svg#mastercard"></use>
+									</svg>
+								</div>
+								<div class="payment-methods__item">
+									<svg class="payment-methods__logo">
+										<use xlink:href="/_sysimg/svg/payments-sprite.svg#yandex"></use>
+									</svg>
+								</div>
+								<div class="payment-methods__item">
+									<svg class="payment-methods__logo">
+										<use xlink:href="/_sysimg/svg/payments-sprite.svg#webmoney"></use>
+									</svg>
+								</div>
+								<div class="payment-methods__item">
+									<svg class="payment-methods__logo">
+										<use xlink:href="/_sysimg/svg/payments-sprite.svg#robo"></use>
+									</svg>
+								</div>
+								<div class="payment-methods__item">
+									<svg class="payment-methods__logo">
+										<use xlink:href="/_sysimg/svg/payments-sprite.svg#qiwi"></use>
+									</svg>
+								</div>
+								<div class="payment-methods__item">
+									<svg class="payment-methods__logo">
+										<use xlink:href="/_sysimg/svg/payments-sprite.svg#paypal"></use>
+									</svg>
+								</div>
+								<div class="payment-methods__item">
+									<svg class="payment-methods__logo">
+										<use xlink:href="/_sysimg/svg/payments-sprite.svg#sber"></use>
+									</svg>
+								</div>
+
+								<div class="payment-methods__item">
+									<svg class="payment-methods__logo">
+										<use xlink:href="/_sysimg/svg/payments-sprite.svg#tinkoff"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="counter-trackers footer__counter">
+							</div>
+						</div>
+						<div class="footer__menu hidden-xs">
+							<div class="menu-footer">
+								<div class="menu-footer__group">
+									<div class="menu-footer__wrap">
+										<div class="menu-footer__title">Клиентам</div>
+										<ul class="menu-footer__list">
+
+											<li class="menu-footer__item">
+												<a class="menu-footer__link " href="https://avtomag24.com.ua/how-to-search-part/">Как найти деталь</a>
+											</li>
+											<li class="menu-footer__item">
+												<a class="menu-footer__link " href="https://avtomag24.com.ua/how-to-order/">Как сделать заказ</a>
+											</li>
+											<li class="menu-footer__item">
+												<a class="menu-footer__link " href="https://avtomag24.com.ua/pay/">Оплата</a>
+											</li>
+											<li class="menu-footer__item">
+												<a class="menu-footer__link " href="https://avtomag24.com.ua/delivery/">Доставка</a>
+											</li>
+											<li class="menu-footer__item">
+												<a class="menu-footer__link " href="https://avtomag24.com.ua/message/">Обратная связь</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+								<div class="menu-footer__group">
+									<div class="menu-footer__wrap">
+										<div class="menu-footer__title">Информация</div>
+										<ul class="menu-footer__list">
+
+											<li class="menu-footer__item">
+												<a class="menu-footer__link " href="https://avtomag24.com.ua/stocks/">Контакты</a>
+											</li>
+											<li class="menu-footer__item">
+												<a class="menu-footer__link " href="https://avtomag24.com.ua/questions/">Вопрос-ответ</a>
+											</li>
+											<li class="menu-footer__item">
+												<a class="menu-footer__link " href="https://avtomag24.com.ua/feedbacks/">Отзывы</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+								<div class="menu-footer__group">
+									<div class="menu-footer__wrap">
+										<div class="menu-footer__title">Онлайн-каталоги</div>
+										<ul class="menu-footer__list">
+
+											<li class="menu-footer__item">
+												<a class="menu-footer__link " href="https://avtomag24.com.ua/ccatalogs/totalcatalog/">Catcar Aftermarket</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="btn-scroll-up" id="btn-scroll-up">
+						<svg class="btn-scroll-up__svg">
+							<use xlink:href="/_sysimg/svg/ui.svg#arrowhead"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="pull-left copyright-company">
+								© 2018, ООО "Компания «Avtomag24»" </div>
+							<div class="pull-right copyright-our">
+
+								Сделано в <a href="https://www.tradesoft.ru/" target="_blank">ТрэйдСофт</a> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<div class="container-push">
+		<script type="text/javascript">
+			if (!window._forms) window._forms = [];
+			window._forms["login"] = new WarForm("login", {
+				customValidate: null,
+				messages: { "required": "\u042d\u0442\u043e \u043f\u043e\u043b\u0435 \u043e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u043e \u043a \u0437\u0430\u043f\u043e\u043b\u043d\u0435\u043d\u0438\u044e" }
+				, humanCheckHref: "/_phplib/check/img.php"
+			});
+			document.addEventListener("DOMContentLoaded", function () {
+				window._forms["login"].init();
+			});
+		</script>
+		<div id="CustomerBasketId">
+
+			<div class="auth-block">
+
+
+				<!-- Modal -->
+				<div class="row">
+					<div class="modal fade in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="loginFormTitle">
+						<div class="modal-dialog auth-modal-dialog" role="document">
+							<div class="auth-modal-content modal-content">
+								<div class="auth-modal-header">
+									<button type="button" class="close modal-dialog__close" data-dismiss="modal" aria-label="Close"></button>
+									<div class="auth-title" id="loginFormTitle">Авторизация</div>
+								</div>
+								<div class="auth-modal-body modal-body">
+									<form id="login" name="login" action="https://avtomag24.com.ua/" method="POST" onsubmit="">
+										<input class="clearAll TextBox" id="loginform" type="hidden" name="loginform" value="1"> <input class="clearAll TextBox"
+										 id="remember" type="hidden" name="remember" value="1">
+										<div class="auth-input">
+											<label class="auth-label">Логин</label>
+											<input class="clearAll TextBox required" id="userlogin" type="text" name="userlogin" value="" placeholder="логин">
+										</div>
+										<div class="auth-input">
+											<label class="auth-label">Пароль</label>
+											<input class="clearAll TextBox required" id="userpassword" type="password" name="userpassword" value=""
+											 placeholder="пароль"> </div>
+										<input class="btn btn--auth-submit" type="submit" value="Войти">
+										<div class="auth-input"> </div>
+										<a class="auth-link" href="https://avtomag24.com.ua/recover_password.html">Забыли пароль?</a>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="navbar-push visible-xs">
+		<div class="navbar-push__inner">
+			<button class="navbar-push__close btn-close-nav"></button>
+			<div class="mobile-nav">
+				<div class="mobile-nav__item">
+					<div class="mobile-nav__header">
+						<div class="mobile-nav__title">Меню</div>
+						<div class="mobile-nav__actions">
+							<a class="btn mobile-nav__btn mobile-nav__btn-login">Войти</a>
+							<a class="btn btn_view_common mobile-nav__btn" href="https://avtomag24.com.ua/registration.html">Регистрация</a>
+						</div>
+					</div>
+					<ul class="mobile-menu">
+						<li class="mobile-menu__item mobile-menu__item--dropdown">
+							<a class="mobile-menu__link" href="https://avtomag24.com.ua/">Новым клиентам</a>
+							<ul class="mobile-menu-sub">
+
+								<li class="mobile-menu-sub__item">
+									<a class="mobile-menu-sub__link " href="https://avtomag24.com.ua/how-to-search-part/">Как найти деталь</a>
+								</li>
+
+								<li class="mobile-menu-sub__item">
+									<a class="mobile-menu-sub__link " href="https://avtomag24.com.ua/how-to-order/">Как сделать заказ</a>
+								</li>
+							</ul>
+						</li>
+						<li class="mobile-menu__item ">
+							<a class="mobile-menu__link" href="https://avtomag24.com.ua/pay/">Оплата</a>
+						</li>
+						<li class="mobile-menu__item ">
+							<a class="mobile-menu__link" href="https://avtomag24.com.ua/delivery/">Доставка</a>
+						</li>
+						<li class="mobile-menu__item ">
+							<a class="mobile-menu__link" href="https://avtomag24.com.ua/stocks/">Контакты</a>
+						</li>
+						<li class="mobile-menu__item ">
+							<a class="mobile-menu__link" href="https://avtomag24.com.ua/questions/">Вопрос-ответ</a>
+						</li>
+						<li class="mobile-menu__item ">
+							<a class="mobile-menu__link" href="https://avtomag24.com.ua/feedbacks/">Отзывы</a>
+						</li>
+					</ul>
+
+					<div class="mobile-nav__footer">
+						<div class="mobile-contacts">
+							<div class="contact-details contact-details_mobile">
+								<div class="contact-details__item">
+									<svg class="contact-details__icon">
+										<use xlink:href="/_sysimg/svg/contacts-sprite.svg#phone"></use>
+									</svg>
+									<div class="contact-details__value" data-contact-prop="phone">+38(096)541-00-41 +38(073)541-00-41</div>
+								</div>
+								<div class="contact-details__item">
+									<svg class="contact-details__icon">
+										<use xlink:href="/_sysimg/svg/contacts-sprite.svg#email"></use>
+									</svg>
+									<div class="contact-details__value" data-contact-prop="email">admin@avtomag24.com.ua</div>
+								</div>
+							</div>
+						</div>
+						<div class="select-country ">
+							<div class="select-country__container">
+								<button class="select-country__button btn btn_view_pseudo" title="сейчас выбран этот язык">
+									<svg class="select-country__icon">
+										<use xlink:href="/_sysimg/svg/ui.svg#language">
+										</use>
+									</svg>
+									<span class="select-country__name">Русский</span>
+								</button>
+								<div class="select-country__inner-container">
+									<a class="select-country__item" href="https://avtomag24.com.ua/?change-lng=en" title="переключить язык клиентской части на английский">
+										<span class="select-country__name">Английский</span>
+									</a>
+									<a class="select-country__item" href="https://avtomag24.com.ua/?change-lng=ua" title="переключить язык клиентской части на украинский">
+										<span class="select-country__name">Украинский</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="mobile-nav__item">
+
+
+					<script type="text/javascript">
+						if (!window._forms) window._forms = [];
+						window._forms["login"] = new WarForm("login", {
+							customValidate: null,
+							messages: { "required": "\u042d\u0442\u043e \u043f\u043e\u043b\u0435 \u043e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u043e \u043a \u0437\u0430\u043f\u043e\u043b\u043d\u0435\u043d\u0438\u044e" }
+							, humanCheckHref: "/_phplib/check/img.php"
+						});
+						document.addEventListener("DOMContentLoaded", function () {
+							window._forms["login"].init();
+						});
+					</script>
+					<div id="CustomerBasketId">
+
+						<div class="auth-block">
+
+
+							<div class="auth-title" id="myModalLabel">Авторизация</div>
+
+							<form id="login" name="login" action="https://avtomag24.com.ua/" method="POST" onsubmit="">
+								<input class="clearAll TextBox" id="loginform" type="hidden" name="loginform" value="1"> <input class="clearAll TextBox"
+								 id="remember" type="hidden" name="remember" value="1">
+								<div class="auth-input">
+									<label class="auth-label">Логин</label>
+									<input class="clearAll TextBox required" id="userlogin" type="text" name="userlogin" value="" placeholder="логин">
+								</div>
+								<div class="auth-input">
+									<label class="auth-label">Пароль</label>
+									<input class="clearAll TextBox required" id="userpassword" type="password" name="userpassword" value=""
+									 placeholder="пароль"> </div>
+								<input class="btn btn--auth-submit" type="submit" value="Войти"><br>
+								<div class="auth-input"> </div>
+								<a class="auth-link" href="https://avtomag24.com.ua/recover_password.html">Забыли пароль?</a>
+							</form>
+
+
+						</div>
+
+					</div>
+					<a class="mobile-nav__btn-back">Назад</a>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal fade" id="modal-container" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="close ico-auth-close" data-dismiss="modal" aria-label="Close">
+						<span class="ico-close"></span>
+					</button>
+
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", function () {
+
+			(function () {
+				if (window.warModules && typeof window.warModules.AccordionTab !== "undefined") {
+					var Tabs = new window.warModules.AccordionTab({ "containerSelector": "#client-catalog-tabs" });
+				}
+			})();
+
+			(function () {
+				if (typeof window.warUtils.objectFitPolyfill !== "undefined") {
+					var images = document.querySelectorAll('.catalog-common__picture-icon');
+					if (images.length > 0) {
+						var i;
+						for (i = 0; i < images.length; i++) {
+							window.warUtils.objectFitPolyfill(images[i]);
+						}
+					}
+				}
+			})();
+
+			(function () {
+				if (typeof window.warUtils.objectFitPolyfill !== "undefined") {
+					var images = document.querySelectorAll('.list-catalog-tile__image');
+					if (images.length > 0) {
+						var i;
+						for (i = 0; i < images.length; i++) {
+							window.warUtils.objectFitPolyfill(images[i]);
+						}
+					}
+				}
+			})();
+
+			if (window.warModules && typeof window.warModules.SelectStockPoint !== "undefined") {
+				var stockModule = new window.warModules.SelectStockPoint({ "yandexApiLink": "https:\/\/api-maps.yandex.ru\/2.1\/?lang=ru_RU", "showMap": true, "list": [{ "id": "1", "name": "\u0413\u043e\u043b\u043e\u0432\u043d\u043e\u0439 \u043e\u0444\u0438\u0441", "address": "\u041d\u0438\u043a\u043e\u043b\u0430\u0435\u0432, \u0443\u043b. \u041f\u0443\u0448\u043a\u0438\u043d\u0441\u043a\u0430\u044f 54\/1", "phone": "+38(096)541-00-41 +38(073)541-00-41", "email": "admin@avtomag24.com.ua", "skype": "", "active": true, "coordinates": "46.963257,31.978856", "work_mode": "\u041f\u043d. - \u041f\u0442.: 9-17<br\/>\u0421\u0431.: 9-15<br\/>\u0412\u0441.: \u0432\u044b\u0445\u043e\u0434\u043d\u043e\u0439", "data": ["\u041f\u043d. - \u041f\u0442.: 9-17", "\u0421\u0431.: 9-15", "\u0412\u0441.: \u0432\u044b\u0445\u043e\u0434\u043d\u043e\u0439", "\u0422\u0435\u043b.: +38(096)541-00-41 +38(073)541-00-41"] }] });
+				stockModule.stockSelectAction = function (id) {
+					setCookie("force_stock_id", id);
+					this.hideDropdown();
+				};
+				stockModule.on("SELECT_STOCK", function () {
+					if (typeof window.searchModule !== "undefined" && location.pathname === "/search.html") {
+						window.searchModule.pushSearchForm(true);
+					}
+				});
+			}
+
+
+			if (typeof SearchModule !== 'undefined' && !window.searchModule) {
+				window.searchModule = new SearchModule({
+					basketUrl: '/shop/basket.html',
+					basketAddedUrl: '/_ajax/basket.html?func=add',
+					historyItems: [],
+					checkRemains: 1,
+					useAutocompleteSearch: 0,
+					messages: {
+						setMaxAmount: 'Данный товар доступен только в количестве %s. Поместить в корзину заказ на доступное количество?',
+						errorArticlePlaceholder: 'Введите код или VIN',
+						providerSearch: 'Опрашиваем поставщиков...',
+						providerSearchEnd: 'Мы опросили всех поставщиков',
+						providerSearchShowAll: 'Показать еще',
+						positionsArr: ['позицию', 'позиции', 'позиций']
+					}
+				});
+			}
+
+
+
+
+			if (typeof ModuleBasket !== 'undefined') {
+				window.basketModule = new ModuleBasket({
+					reloadUrl: '/_ajax/basket.html',
+					matchParam: "data-field='module-basket'",
+					countElMatchParam: "data-field='module-basket-count'",
+					sumElMatchParam: "data-field='module-basket-sum'",
+					cid: 1,
+					basketAddedUrl: '/_ajax/basket.html?func=add',
+				});
+			}
+
+			if (typeof DropDownList === 'function') {
+				var elSearchTermSelect = new DropDownList({
+					name: 'term',
+					replaceSelect: 1,
+					messages: {
+						noneResultsText: 'Результатов не найдено {0}'
+					}
+				});
+			}
+
+			(function () {
+
+				var smodeInput = document.getElementById('smode')
+				term = document.getElementById('term'),
+					iconClassEdit = 'search-setting__icon--edit',
+					searchSettingToggleButton = document.getElementById('search-setting-toggle');
+
+				function checkDefaultSearchSettings() {
+					var st = document.querySelector('input[type="radio"][name="st"]:checked');
+					if (st.value === 'default' && smodeInput.value === 'A' && parseInt(term.value) === 0) {
+						searchSettingToggleButton.classList.remove(iconClassEdit);
+					} else {
+						searchSettingToggleButton.classList.add(iconClassEdit);
+					}
+				};
+
+				jqWar('#searchTemplateDefault').change(function () {
+					setCookie('searchTemplate', 'default');
+					checkDefaultSearchSettings();
+				});
+				jqWar('#searchTemplateGroups').change(function () {
+					setCookie('searchTemplate', 'groups');
+					checkDefaultSearchSettings();
+				});
+				jqWar('#term').change(function () {
+					setCookie('term', jqWar(this).val());
+					checkDefaultSearchSettings();
+				});
+
+				var chkMode = document.getElementById('chk_smode');
+				if (smodeInput && chkMode) {
+					chkMode.addEventListener('click', function (e) {
+						if (this.checked) {
+							smodeInput.value = 'A';
+						} else {
+							smodeInput.value = 'A0';
+						}
+						setCookie('smode', smodeInput.value);
+						checkDefaultSearchSettings();
+					});
+				}
+
+				function searchSettingsToggle(controlButton) {
+
+					var fadeFull = document.querySelector('.search-full');
+
+					function SettingsToggle(settingDiv, fadeDiv) {
+						this.cl = 'search-full--showed';
+						this.settingDiv = settingDiv;
+						this.fadeDiv = fadeDiv;
+						this.showed = false;
+						var self = this;
+						this.hideEvent = function (e) {
+							if (self.showed) {
+								if (!self.fadeDiv.contains(e.target)) {
+									self.hide();
+								}
+							}
+						};
+					}
+
+					SettingsToggle.prototype.toggle = function () {
+						this.showed ? this.hide() : this.show();
+					};
+
+					SettingsToggle.prototype.show = function () {
+						this.settingDiv.classList.add(this.cl);
+						this.showed = true;
+						var self = this;
+						setTimeout(function () {
+							document.addEventListener('click', self.hideEvent);
+						}, 0);
+					};
+
+					SettingsToggle.prototype.hide = function () {
+						this.settingDiv.classList.remove(this.cl);
+						this.showed = false;
+						document.removeEventListener('click', this.hideEvent);
+					};
+
+					var setting = new SettingsToggle(fadeFull, fadeFull);
+
+					if (fadeFull && controlButton) {
+						controlButton.addEventListener('click', function () {
+							setting.toggle();
+						});
+					}
+
+				};
+
+				searchSettingsToggle(searchSettingToggleButton);
+
+			})();
+
+
+			(function () {
+
+				var carousel = jqWar('.main-slider__carousel');
+				if (!carousel.hasClass('owl-loaded')) {
+					carousel.owlCarousel({ "items": 1, "nav": true, "dots": true });
+				}
+
+			})();
+
+		});
+
+	</script>
+	<div class="dialog-modal dialog-modal_hidden" id="common-dialog-modal" aria-hidden="true" tabindex="-1">
+		<div class="dialog-modal__window" aria-modal="true"><button class="dialog-modal__close" type="button" alt="закрыть"></button>
+			<div class="dialog-modal__content"></div>
+		</div>
+	</div>
+</body>
+
+</html>
