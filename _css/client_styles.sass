@@ -1,0 +1,97 @@
+.header
+  background-color: #272a2a
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5)
+.contact-details_top
+  color: #dedede
+.header__user-info
+  .btn
+    background-color: transparent
+    border: none
+    position: relative
+    &:first-child
+      color: #dadada
+      &:hover
+        color: #fff
+        &::before
+          bottom: 7px
+      &::before,
+      &::after
+        margin: auto
+        content: ''
+        position: absolute
+      &::before
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 5px
+        height: 2px
+        background-color: #b72b1f
+        width: 75%
+        transition: .3s
+      &::after
+        background-image: url(../img/login.svg)
+        width: 21px
+        height: 21px
+        background-size: contain
+        left: -20px
+        top: 0
+        bottom: 0
+.header__reg-button
+  color: #dadada
+
+.header-nav
+  padding: 30px 0
+//   position: relative
+//   &::before
+//     content: ''
+//     position: absolute
+//     left: -20px
+//     top: 0
+//     width: 582px
+//     height: 582px
+//     background-image: url(../img/gear.svg)
+//     background-repeat: no-repeat
+//     z-index: -1
+
+
+.header-nav__img,
+.header-nav__picture
+  max-height: 95px
+.search-form__container
+  background-color: unset
+  border-bottom: 3px solid #e02e2e
+
+.search-form__input, input[type=text].search-form__input
+  color: #000000
+  font-size: 18px
+  text-align: center
+.search-form_focus .search-form__container
+  box-shadow: none
+  // background-color: #ededed
+  border-bottom: 3px solid #333
+.header-catalog__right
+  background-color: #ededed
+  padding: 11px
+.order-amount
+  color: #3d4059
+  font-size: 18px
+  border: none
+  &:active, &:focus, &:hover
+    background-color: unset
+    color: inherit
+
+.header-catalog__wrapper
+  min-height: unset
+.header-catalog__search-form
+  max-width: 50%
+.header-catalog__panel
+  background-color: unset
+.top-nav
+  justify-content: space-around
+.header-nav__menu
+  border-top: 1px solid #e4e5e6
+.top-nav__link
+  color: #3d4059
+  font-size: 16px
+
