@@ -248,98 +248,98 @@ jqWar(document).ready(function () {
 	/* End Мобильное меню
 	 --------------------*/
 
-	function stickyTopPanel(options){
+	// function stickyTopPanel(options){
 
-		if(!options.panelContainer || !options.panel) return;
+	// 	if(!options.panelContainer || !options.panel) return;
 
-		this.panelContainer = options.panelContainer;
-		this.panel = options.panel;
-		this.cssFixedPanelClass = options.cssFixedPanelClass || 'header-catalog__panel--fixed';
+	// 	this.panelContainer = options.panelContainer;
+	// 	this.panel = options.panel;
+	// 	this.cssFixedPanelClass = options.cssFixedPanelClass || 'header-catalog__panel--fixed';
 
-		this.init();
+	// 	this.init();
 
-	}
+	// }
 
-	stickyTopPanel.prototype.init = function() {
+	// stickyTopPanel.prototype.init = function() {
 
-		this.stikyState = false
+	// 	this.stikyState = false
 
-		var self = this;
+	// 	var self = this;
 
-		setTimeout(function(){
-			self.setPanelHeight();
-			self.setPanelOffsetTop();
-		}, 0);
+	// 	setTimeout(function(){
+	// 		self.setPanelHeight();
+	// 		self.setPanelOffsetTop();
+	// 	}, 0);
 
-		document.addEventListener('scroll', function(e){
+	// 	document.addEventListener('scroll', function(e){
 
-			if(window.pageYOffset >= self.panelOffsetTop){
-				self.sticky();
-			} else {
-				self.unsticky()
-			}
+	// 		if(window.pageYOffset >= self.panelOffsetTop){
+	// 			self.sticky();
+	// 		} else {
+	// 			self.unsticky()
+	// 		}
 
-		})
+	// 	})
 
-		window.addEventListener('resize', function() {
+	// 	window.addEventListener('resize', function() {
 
-			setTimeout(function(){
-				self.setPanelOffsetTop();
-			}, 0);
+	// 		setTimeout(function(){
+	// 			self.setPanelOffsetTop();
+	// 		}, 0);
 
-		});
+	// 	});
 
-	};
+	// };
 
-	stickyTopPanel.prototype.setPanelHeight = function() {
+	// stickyTopPanel.prototype.setPanelHeight = function() {
 
-		this.panelHeight = this.panel.offsetHeight;
+	// 	this.panelHeight = this.panel.offsetHeight;
 
-	};
+	// };
 
-	stickyTopPanel.prototype.setPanelOffsetTop = function() {
+	// stickyTopPanel.prototype.setPanelOffsetTop = function() {
 
-		if(this.stikyState){
-			this.panelOffsetTop = this.panelContainer.offsetTop;
-		} else {
-			this.panelOffsetTop = this.panel.offsetTop;
-		}
+	// 	if(this.stikyState){
+	// 		this.panelOffsetTop = this.panelContainer.offsetTop;
+	// 	} else {
+	// 		this.panelOffsetTop = this.panel.offsetTop;
+	// 	}
 
-	};
+	// };
 
-	stickyTopPanel.prototype.sticky = function() {
+	// stickyTopPanel.prototype.sticky = function() {
 
-		if(this.stikyState) return;
+	// 	if(this.stikyState) return;
 
-		this.panelContainer.style.height = this.panelHeight + 'px';
-		this.panel.classList.add(this.cssFixedPanelClass);
-		this.stikyState = true;
+	// 	this.panelContainer.style.height = this.panelHeight + 'px';
+	// 	this.panel.classList.add(this.cssFixedPanelClass);
+	// 	this.stikyState = true;
 
-	};
+	// };
 
-	stickyTopPanel.prototype.unsticky = function() {
+	// stickyTopPanel.prototype.unsticky = function() {
 
-		if(!this.stikyState) return;
+	// 	if(!this.stikyState) return;
 
-		this.panelContainer.style.height = 'auto';
-		this.panel.classList.remove(this.cssFixedPanelClass);
-		this.stikyState = false;
+	// 	this.panelContainer.style.height = 'auto';
+	// 	this.panel.classList.remove(this.cssFixedPanelClass);
+	// 	this.stikyState = false;
 
-	};
+	// };
 
-	(function(){
-		var hCatalog = document.getElementsByClassName('header-catalog')[0];
-		if(hCatalog){
-			var hCatalogPanel = hCatalog.getElementsByClassName('header-catalog__panel')[0];
-			if(hCatalogPanel){
-				var panel = new stickyTopPanel({
-					panel: hCatalogPanel,
-					panelContainer: hCatalog
-				})
-			}
-		}
+	// (function(){
+	// 	var hCatalog = document.getElementsByClassName('header-catalog')[0];
+	// 	if(hCatalog){
+	// 		var hCatalogPanel = hCatalog.getElementsByClassName('header-catalog__panel')[0];
+	// 		if(hCatalogPanel){
+	// 			var panel = new stickyTopPanel({
+	// 				panel: hCatalogPanel,
+	// 				panelContainer: hCatalog
+	// 			})
+	// 		}
+	// 	}
 
-	})();
+	// })();
 
 	/* Begin Замена картинок сортировки
 	 --------------------*/

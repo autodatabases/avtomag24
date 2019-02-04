@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="21px" viewBox="0 0 14 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-126.000000, -33.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="location" transform="translate(112.000000, 22.000000)">
+                <path d="M21,11 C17.135,11 14,14.29175 14,18.35 C14,23.8625 21,32 21,32 C21,32 28,23.8625 28,18.35 C28,14.29175 24.865,11 21,11 Z M21,20.975 C19.62,20.975 18.5,19.799 18.5,18.35 C18.5,16.901 19.62,15.725 21,15.725 C22.38,15.725 23.5,16.901 23.5,18.35 C23.5,19.799 22.38,20.975 21,20.975 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
