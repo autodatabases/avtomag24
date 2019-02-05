@@ -174,18 +174,12 @@ input
   white-space: nowrap
 
 .contacts__icon
-  -webkit-border-radius: 50px
-  border-radius: 50px
-  background-color: #0099d1
   margin-right: 10px
   width: 35px
   height: 35px
-  &.mail
-    background-color: #36287c
-  &.phone
-    background-color: #de181f
   &.dollar
-    background-color: #3d3f59
+    background-color: #000
+    border-right: 2px solid #e02e2e
 
 
 .contact-details__icon, .select-stock-point__icon
@@ -630,7 +624,7 @@ input
 
 footer
   .contact-details__item
-    margin-top: 6px
+    margin-top: 14px
   .contact-details__value a
     padding: 3px 5px
 
@@ -702,18 +696,18 @@ input[type="radio"] + label.select-stock-point__label
   border-radius: 30px
   top: 38%
 
+.select-stock-point__header
+  display: none
+
 .select-stock-point__address
   font-size: 16px
   font-weight: 500
   display: block
+  border-bottom: 3px solid #b72b1f
   text-align: center
-  background-color: #0099d2
-  -webkit-border-radius: 100px
-  border-radius: 100px
   padding: 5px
   width: 65%
   margin: auto
-  color: #fff
 
 .select-stock-point__label:hover, input[type="radio"] + label.select-stock-point__label:hover
   background-color: transparent
@@ -1337,6 +1331,16 @@ button, input, optgroup, select, textarea
     border: 1px solid #e0dfdf
     background-color: #f6f6f6
 
+.brand-catalog-list__list
+  border-left: 2px solid #c82621
+
+.brand-catalog-list__group
+  margin-bottom: 12px
+
+.brand-catalog-list__item
+  margin-left: 10px
+
+
 .accordion-tab__description, .accordion-tabs__link--active
   display: none
 
@@ -1377,39 +1381,8 @@ button, input, optgroup, select, textarea
 .main-slider__title:first-child
   margin-top: 95px
 
-.accordion-tabs
-  margin-top: 20px
 
-.accordion-tabs__cont > section
-  -webkit-box-shadow: 3px 2px 37px -1px rgba(208, 209, 213, 0.5)
-  box-shadow: 3px 2px 37px -1px rgba(208, 209, 213, 0.5)
-  border-radius: 5px
-  background-color: #fff
-  min-height: unset
-  padding: 10px !important
-  margin-bottom: 20px
-  height: 100% !important
-  overflow: visible
 
-.accordion-tabs__tab-content
-  height: unset !important
-  min-height: unset
-  overflow: unset
-  background-color: #fff
-  -webkit-box-shadow: 0 0 30px rgba(214, 222, 243, 0.5)
-  box-shadow: 0 0 30px rgba(214, 222, 243, 0.5)
-  border-radius: 5px
-  &::before
-    content: 'серии'
-    font-size: 15px
-    background-color: #fff
-    -webkit-box-shadow: 0 -8px 20px -1px rgba(208, 209, 213, 0.22)
-    box-shadow: 0 -8px 20px -1px rgba(208, 209, 213, 0.22)
-    padding: 2px 10px
-    border-radius: 5px
-    position: absolute
-    top: -20px
-    left: 0
 
 .grid-card__item
   border-radius: 3px
@@ -1555,6 +1528,9 @@ button, input, optgroup, select, textarea
 
 .about-us, .partners
   margin-bottom: 40px
+
+.about__container
+  padding: 0 20px
 
 .partners__container
   display: -webkit-box
