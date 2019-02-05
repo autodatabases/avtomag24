@@ -3,42 +3,42 @@
 //   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5)
 // .contact-details_top
 //   color: #dedede
-// .header__user-info
-//   .btn
-//     background-color: transparent
-//     border: none
-//     position: relative
-//     &:first-child
-//       color: #dadada
-//       &:hover
-//         color: #fff
-//         &::before
-//           bottom: 7px
-//       &::before,
-//       &::after
-//         margin: auto
-//         content: ''
-//         position: absolute
-//       &::before
-//         content: ''
-//         position: absolute
-//         left: 0
-//         right: 0
-//         bottom: 5px
-//         height: 2px
-//         background-color: #b72b1f
-//         width: 75%
-//         transition: .3s
-//       &::after
-//         background-image: url(../img/login.svg)
-//         width: 21px
-//         height: 21px
-//         background-size: contain
-//         left: -20px
-//         top: 0
-//         bottom: 0
-// .header__reg-button
-//   color: #dadada
+.header__user-info
+  .btn
+    background-color: unset
+    border: none
+    position: relative
+    &:first-child
+      color: #dadada
+      &:hover
+        color: #fff
+        &::before
+          bottom: 7px
+      &::before,
+      &::after
+        margin: auto
+        content: ''
+        position: absolute
+      &::before
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 5px
+        height: 2px
+        background-color: #b72b1f
+        width: 75%
+        transition: .3s
+      &::after
+        background-image: url(../img/login.svg)
+        width: 21px
+        height: 21px
+        background-size: contain
+        left: -20px
+        top: 0
+        bottom: 0
+.header__reg-button
+  color: #dadada
 
 // .header-nav
 //   padding: 30px 0
@@ -58,18 +58,18 @@
 // .header-nav__img,
 // .header-nav__picture
 //   max-height: 95px
-// .search-form__container
-//   background-color: unset
-//   border-bottom: 3px solid #e02e2e
+.search-form__container
+  background-color: unset
+  border-bottom: 3px solid #e02e2e
 
-// .search-form__input, input[type=text].search-form__input
-//   color: #000000
-//   font-size: 18px
-//   text-align: center
-// .search-form_focus .search-form__container
-//   box-shadow: none
-//   // background-color: #ededed
-//   border-bottom: 3px solid #333
+.search-form__input, input[type=text].search-form__input
+  color: #000000
+  font-size: 18px
+  text-align: center
+.search-form_focus .search-form__container
+  box-shadow: none
+  // background-color: #ededed
+  border-bottom: 3px solid #333
 // .header-catalog__right
 //   background-color: #ededed
 //   padding: 11px
@@ -100,9 +100,12 @@ a
   -o-transition: 0.4s
   transition: 0.4s
 
-h1
-  color: #3d3f59
-  font-size: 26px
+// h1
+//   color: #3d3f59
+//   font-size: 30px
+// h3
+//   color: #3d3f59
+//   font-size: 26px
 
 .btn
   &.active
@@ -137,15 +140,6 @@ input
     border-radius: 10px
     padding: 8px
 
-.red
-  background-color: #de181f
-
-.violet
-  background-color: #36287c
-
-.blue
-  background-color: #0099d1
-
 .shadow
   display: none
 
@@ -161,14 +155,13 @@ input
   .container
     width: auto
 
-.header__wrapper
-  margin-top: 7px
 
 .header
-  background-color: #fff
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5)
+  background-color: #272a2a
 
 .contact-details_top
-  color: #3d4059
+  color: #d4d4d4
   width: 96%
   -webkit-box-pack: justify
   -ms-flex-pack: justify
@@ -194,13 +187,13 @@ input
   &.dollar
     background-color: #3d3f59
 
-.select-stock-point__show
-  border-bottom: none
 
 .contact-details__icon, .select-stock-point__icon
   height: 35px
   width: 35px
   padding: 9px
+.select-stock-point__show-icon
+  fill: #d8d8d8
 
 .header-nav__user-info .btn
   -webkit-border-radius: 60px
@@ -212,14 +205,11 @@ input
 
 .header__user-info
   .btn, .submitButton
-    -webkit-border-radius: 60px
-    border-radius: 60px
     margin: auto auto auto 10px
     height: 35px
     padding: 7px 20px
     border: none
-  .btn, .submitButton
-    background-color: #de181f
+
 
 .auth-user
   min-width: 223px
@@ -240,11 +230,6 @@ input
 .header-nav__user-info .header__reg-button
   background-color: #f1f1f1
 
-.header__user-info .header__reg-button
-  background-color: #f1f1f1
-  &:hover
-    color: #000
-    background-color: #dcdcdc
 
 .header-nav__img, .header-nav__picture
   max-height: 90px
@@ -281,24 +266,6 @@ input
 .image__container, .search-setting__icon
   margin-right: 20px
 
-.search-form__container
-  -webkit-border-radius: 100px
-  border-radius: 100px
-  background-color: #f1f1f1
-  -webkit-transition: all 0.3s
-  -o-transition: all 0.3s
-  transition: all 0.3s
-
-.search-form_focus .search-form__container
-  -webkit-box-shadow: 2px 3px 15px rgba(183, 183, 183, 0.47)
-  box-shadow: 2px 3px 15px rgba(183, 183, 183, 0.47)
-  -webkit-transform: scale(1.015)
-  -ms-transform: scale(1.015)
-  transform: scale(1.015)
-  -webkit-transition: all 0.3s
-  -o-transition: all 0.3s
-  transition: all 0.3s
-
 .search-form
   max-width: 100%
   -webkit-box-flex: 1
@@ -327,9 +294,6 @@ input
   -webkit-border-radius: 7px
   border-radius: 7px
 
-.image__container, .search-form__submit
-  -webkit-box-shadow: 2px 0 7px rgba(163, 163, 163, 0.5)
-
 .user-search-history__link
   color: #3d4058
   display: block
@@ -337,24 +301,11 @@ input
 
 .search-form__input, input[type="text"].search-form__input
   text-align: center
-  height: 49px
   padding-left: 55px
-  padding-right: 30px
 
-.search-form__submit
-  width: 49px !important
-  height: 49px
-  position: absolute
-  -webkit-border-radius: 100px
-  border-radius: 100px
-  border-left: none
-  background-color: #0099d1
-  -webkit-box-shadow: 2px 0 7px rgba(163, 163, 163, 0.5)
-  box-shadow: 2px 0 7px rgba(163, 163, 163, 0.5)
 
 .search-form__submit-svg
-  width: 33px
-  max-height: 33px
+  fill: #000
 
 .search-full
   border: none
@@ -362,9 +313,6 @@ input
   border-radius: 15px
   right: -60px
 
-.order-amount, .search-full__label, .search-full__term-select .dropdown-toggle
-  -webkit-border-radius: 100px
-  border-radius: 100px
 
 .search-full::before
   right: 78px
@@ -394,9 +342,6 @@ input
   width: 60%
   text-align: center
 
-.buttons__container, .image__container
-  display: -webkit-box
-  display: -ms-flexbox
 
 @media only screen and (min-width: 768px)
   .search-form__input, input[type="text"].search-form__input
@@ -430,8 +375,8 @@ input
 .image__container
   height: 49px
   width: 49px
-  -webkit-border-radius: 100px
-  border-radius: 100px
+  background-color: #272a2a
+  border-right: 2px solid #e02e2e
   display: -webkit-box
   display: -ms-flexbox
   display: -webkit-flex
@@ -444,8 +389,6 @@ input
   -ms-flex-align: center
   -webkit-align-items: center
   align-items: center
-  -webkit-box-shadow: 2px 0 7px rgba(163, 163, 163, 0.5)
-  box-shadow: 2px 0 7px rgba(163, 163, 163, 0.5)
 
 .buttons__container
   display: -webkit-box
@@ -466,8 +409,6 @@ input
   min-height: unset
   height: 50px
   width: 200px
-  -webkit-border-radius: 100px
-  border-radius: 100px
   color: #3d3f59
   font-size: 16px
   padding: 0 20px 0 0
@@ -487,11 +428,8 @@ input
     position: absolute
     width: 49px
     height: 49px
-    background-color: #0099d2
-    -webkit-border-radius: 100px
-    border-radius: 100px
-    -webkit-box-shadow: 2px 0 7px rgba(163, 163, 163, 0.5)
-    box-shadow: 2px 0 7px rgba(163, 163, 163, 0.5)
+    background-color: #272a2a
+    border-right: 2px solid #e02e2e
   &::after
     top: 45%
     left: 15px
@@ -508,8 +446,6 @@ input
 .garage__container
   background-color: #f1f1f1
   height: 49px
-  -webkit-border-radius: 100px
-  border-radius: 100px
   padding: 0 20px 0 0
   -webkit-transition: all 0.4s
   -o-transition: all 0.4s
@@ -527,13 +463,9 @@ input
     color: #3d3f59
 
 .menu-catalog-sub, .menu-catalog__list
-  -webkit-border-radius: 24px
-  border-radius: 24px
   top: 2px
   width: 100%
   padding-top: 45px
-  -webkit-box-shadow: 0 0 40px rgba(116, 122, 134, 0.61)
-  box-shadow: 0 0 40px rgba(116, 122, 134, 0.61)
 
 .menu-catalog-sub
   padding-top: 15px
@@ -579,8 +511,6 @@ input
 .top-nav__item--active, .top-nav__item:hover
   border-color: transparent
 
-.top-nav__item--active .top-nav__link, .top-nav__link:hover
-  color: #0099d2
 
 .top-nav__item--sub::after
   top: 13px
@@ -593,17 +523,11 @@ input
 
 .top-menu-sub
   border-top: transparent
-  -webkit-border-radius: 13px
-  border-radius: 13px
   -webkit-box-shadow: 0 0 30px rgba(98, 99, 103, 0.37)
   box-shadow: 0 0 30px rgba(98, 99, 103, 0.37)
   top: 35px
   left: -9px
 
-.top-menu-sub__link
-  &:active, &:focus, &:hover
-    -webkit-border-radius: 80px
-    border-radius: 80px
 
 #navbar
   background-color: #fff
@@ -1312,21 +1236,13 @@ span.text-nowrap.test
       margin: auto
       padding-left: 10px
 
-.popular-goods__title, h1.section__title
+.popular-goods__title, .section__title
+  font-size: 22px
+  background-color: #f6f6f6
+  padding: 5px 20px
+  margin-bottom: 20px
   font-weight: 400
-  position: relative
-  overflow: hidden
-  text-transform: uppercase
-  font-size: 26px
 
-.popular-goods__title::after, h1.section__title::after
-  content: ""
-  width: 80%
-  height: 1px
-  background-color: #3d3f59
-  position: absolute
-  top: 50%
-  margin: 0 20px
 
 .popular-goods__caption, .popular-goods__price
   color: #3d3f59
@@ -1338,15 +1254,7 @@ span.text-nowrap.test
     width: 40px
     height: 40px
 
-.notice-demo__row, .popular-goods__wrapper .owl-carousel.owl-drag .owl-item
-  -webkit-border-radius: 5px
-  border-radius: 5px
-  -webkit-transition: 0.5s
-  -o-transition: 0.5s
-  transition: 0.5s
 
-.owl-carousel.owl-drag .owl-item
-  padding: 0 10px
 
 .popular-goods__item
   -webkit-box-shadow: 0 0 30px rgba(214, 222, 243, 0.5)
@@ -1373,7 +1281,7 @@ span.text-nowrap.test
     background-color: #f2f4fa
     -webkit-border-radius: 25px
     border-radius: 25px
-  h1.section__title
+  .section__title
     font-size: 20px
     text-align: center
     background-color: #f2f4fa
@@ -1383,7 +1291,7 @@ span.text-nowrap.test
       margin-bottom: 30px
   .last-news__header, .last-news__title
     display: none
-  .popular-goods__title::after, h1.section__title::after
+  .popular-goods__title::after,.section__title::after
     content: none
 
 @media (max-width: 768px)
@@ -1426,22 +1334,8 @@ button, input, optgroup, select, textarea
 
 .accordion-tabs__area
   .accordion-tab
-    background-color: #fff
-    -webkit-border-radius: 7px
-    border-radius: 7px
-  -webkit-box-shadow: 4px 2px 25px rgba(215, 220, 238, 0.5)
-  box-shadow: 4px 2px 25px rgba(215, 220, 238, 0.5)
-  overflow: visible
-  &::before
-    content: "серии"
-    position: absolute
-    top: -19px
-    background-color: #fff
-    padding: 2px 15px
-    -webkit-border-radius: 5px 5px 0 0
-    border-radius: 5px 5px 0 0
-    -webkit-box-shadow: -3px -13px 20px rgba(222, 225, 232, 0.27)
-    box-shadow: -3px -13px 20px rgba(222, 225, 232, 0.27)
+    border: 1px solid #e0dfdf
+    background-color: #f6f6f6
 
 .accordion-tab__description, .accordion-tabs__link--active
   display: none
@@ -1470,25 +1364,21 @@ button, input, optgroup, select, textarea
   text-shadow: 0 0 20px #000
 
 .main-slider__btn
-  border-radius: 100px
   opacity: .9
-  background-image: url(../images/NEW/arrow-right.svg)
 
 .main-slider__carousel
   height: 350px
-  border-radius: 10px
+  border-radius: 5px
 
 .main-slider__item
   height: 350px
-  border-radius: 10px
   background-size: cover
 
 .main-slider__title:first-child
   margin-top: 95px
 
 .accordion-tabs
-  overflow: unset !important
-  margin-top: 35px
+  margin-top: 20px
 
 .accordion-tabs__cont > section
   -webkit-box-shadow: 3px 2px 37px -1px rgba(208, 209, 213, 0.5)
@@ -1574,27 +1464,22 @@ button, input, optgroup, select, textarea
   -ms-flex-positive: 1
   flex-grow: 1
   height: 180px
-  -webkit-box-shadow: 0 0 30px rgba(214, 222, 243, 0.5)
-  box-shadow: 0 0 30px rgba(214, 222, 243, 0.5)
-  border-radius: 5px
   background-color: #fff
   margin: 5px
+  border: 1px solid #e0dfdf
   -webkit-transition: .3s
   -o-transition: .3s
   transition: .3s
   &:hover
-    z-index: 3
-    -webkit-transform: scale(1.1)
-    -ms-transform: scale(1.1)
-    transform: scale(1.1)
-    -webkit-box-shadow: 0 0 40px rgba(201, 208, 226, 0.74)
-    box-shadow: 0 0 40px rgba(201, 208, 226, 0.74)
 
 .list-catalog-tile__content
   position: absolute
-  bottom: 10px
-  -ms-flex-item-align: center
-  align-self: center
+  bottom: 0
+  background-color: #f6f6f6
+  left: 0
+  right: 0
+  text-align: center
+  padding: 8px
 
 .list-catalog-tile__image
   height: 79%
@@ -1613,30 +1498,19 @@ button, input, optgroup, select, textarea
   transform: none
 
 .last-news__header
-  border-radius: 4px 4px 0 0
-  background-color: #3d4059
-  padding: 14px 20px
+  background-color: #f6f6f6
+  padding: 7px 20px
   margin: 0 0 15px
 
 .last-news__title
-  color: #fff
-  font-weight: 400
-  font-size: 22px
+  color: #272a2a
+  font-size: 20px
 
 .last-news__all
-  background-color: #242938
-  color: #fff
+  background-color: #e8e8e8
+  color: #000
   border-radius: 3px
 
-a.last-news__all:hover
-  color: #a8b2c5
-
-.news__container
-  background-color: #fff
-  -webkit-box-shadow: 4px 2px 25px rgba(215, 220, 238, 0.5)
-  box-shadow: 4px 2px 25px rgba(215, 220, 238, 0.5)
-  border-radius: 7px
-  margin-top: 15px
 
 .last-news__item
   margin-bottom: 25px
@@ -1652,20 +1526,23 @@ a.last-news__all:hover
     background-color: #b8b9c1
 
 .last-news__list
-  padding: 10px 20px
+  padding: 10px 5px
+  margin: 0
   margin-bottom: 25px
+  background-color: #f6f6f6
 
 .last-news__date
   display: table
-  border-radius: 4px
-  background-color: #f2f4fa
+  background-color: #da6565
   padding: 2px 15px
-  color: #85858c
+  color: #fff
+  float: right
 
 .last-news__short-text
   color: #41435b
   font-weight: 500
   font-size: 18px
+  margin-bottom: 10px
   p
     font-weight: 400
     font-size: 14px
