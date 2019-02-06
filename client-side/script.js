@@ -341,6 +341,10 @@ jqWar(document).ready(function () {
 
 	// })();
 
+	  window.onscroll = function() {
+    200 < document.body.scrollTop || 200 < document.documentElement.scrollTop ? document.getElementById("navbar").style.top = "0" : document.getElementById("navbar").style.top = "-80px"
+  }
+
 	/* Begin Замена картинок сортировки
 	 --------------------*/
 
