@@ -220,7 +220,7 @@
 													</div>
 												</div>
 											</form>
-											<div class="buttons__container">
+											<!-- <div class="buttons__container">
 												<div class="menu-catalog header-catalog__menu">
 													<button class="menu-catalog__btn"><span class="menu-catalog__btn-title">Каталоги</span></button>
 													<ul class="menu-catalog__list">
@@ -264,7 +264,7 @@
 														<span>Мои заказы</span>
 													</a>
 												</div>
-											</div>
+											</div> -->
 										</div>
 										<div class="header-catalog__right">
 											<!--  -->
@@ -286,160 +286,170 @@
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<div id="navbar">
-			<div class="logo_navbar"><a href="/">Avtomag24</a></div>
-			<div class="header-catalog">
-				<div class="header-catalog__panel">
-					<div class="col-xs-12 header-catalog__wrapper">
-						<form class="search-form  header-catalog__search-form" name="search_code" action="/search.html" method="GET">
-							<div id="search_input" class="search-form__container">
-								<div id="search-history-template" class="user-search-history search-form__history" v-cloak="" v-if="items.length &gt; 0">
-									<div class="user-search-history__show">
-										<svg class="user-search-history__icon-svg">
-											<use xlink:href="/_sysimg/svg/usermi-sprite.svg#multisearch-history"></use>
-										</svg>
+			<div id="navbar">
+				<div class="logo_navbar"><a href="/">Avtomag24</a></div>
+				<div class="header-catalog">
+					<div class="header-catalog__panel">
+						<div class="col-xs-12 header-catalog__wrapper">
+							<form class="search-form  header-catalog__search-form" name="search_code" action="/search.html" method="GET">
+								<div id="search_input" class="search-form__container">
+									<div id="search-history-template" class="user-search-history search-form__history" v-cloak=""
+										v-if="items.length &gt; 0">
+										<div class="user-search-history__show">
+											<svg class="user-search-history__icon-svg">
+												<use xlink:href="/_sysimg/svg/usermi-sprite.svg#multisearch-history"></use>
+											</svg>
+										</div>
+										<div class="user-search-history__list-container" v-if="visibleDrop">
+											<ul class="user-search-history__list">
+												<li class="user-search-history__item" v-for="item in items">
+													<a :href="item.url" @click.prevent="clickUrl(item.url)"
+														class="user-search-history__link">{{item.sse_search_number}}</a>
+												</li>
+											</ul>
+										</div>
+									</div> <input class="search-form__input" type="text" name="article" value=""
+										placeholder="Поиск по артикулу, бренду, наименованию, VIN-коду" autocomplete="off"><input type="hidden"
+										name="smart_search" value="1">
+			
+			
+									<div class="search-setting search-form__settings">
+										<button type="button" id="search-setting-toggle" class=" search-setting__icon search-setting__icon--svg">
+											<svg class="search-setting__icon-svg">
+												<use xlink:href="/_sysimg/svg/ui.svg#settings"></use>
+											</svg>
+										</button>
+										<div class="search-setting__options">
+											<div id="search-full" class="search-full">
+												<div class="search-full__col">
+													<div class="search-full__title">Вид результатов поиска:</div>
+													<div id="searchTemplate" class="search-full__template">
+														<input id="searchTemplateDefault" type="radio" name="st" value="default">
+														<label class="search-full__label" for="searchTemplateDefault">классический</label>
+														<input id="searchTemplateGroups" type="radio" name="st" value="groups" checked="checked">
+														<label class="search-full__label" for="searchTemplateGroups">сгруппированный</label>
+													</div>
+													<div class="search-full__smode">
+														<input type="checkbox" name="chk_smode" class="search-full__chk-smode" id="chk_smode"
+															checked="checked">
+														<label class="search-full__smode-label" for="chk_smode">Искать аналоги</label>
+													</div>
+													<input type="hidden" name="smode" id="smode" value="A">
+													<input type="hidden" name="sort___search_results_by" id="sort___search_results_by"
+														value="final_price">
+												</div>
+			
+												<div class="search-full__col">
+													<div class="search-full__title">Срок поставки:</div>
+													<div class="search-full__term-select">
+														<select id="term" name="term">
+															<option value="0">не важен</option>
+															<option value="10">до 10 дней</option>
+															<option value="8">до 8-ми дней</option>
+															<option value="5">до 5 дней</option>
+															<option value="3">до 3-х дней</option>
+															<option value="1">1 день</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
-									<div class="user-search-history__list-container" v-if="visibleDrop">
-										<ul class="user-search-history__list">
-											<li class="user-search-history__item" v-for="item in items">
-												<a :href="item.url" @click.prevent="clickUrl(item.url)" class="user-search-history__link">{{item.sse_search_number}}</a>
-											</li>
-										</ul>
-									</div>
-								</div> <input class="search-form__input" type="text" name="article" value="" placeholder="Поиск по артикулу, бренду, наименованию, VIN-коду"
-								 autocomplete="off"><input type="hidden" name="smart_search" value="1">
-
-
-								<div class="search-setting search-form__settings">
-									<button type="button" id="search-setting-toggle" class=" search-setting__icon search-setting__icon--svg">
-										<svg class="search-setting__icon-svg">
-											<use xlink:href="/_sysimg/svg/ui.svg#settings"></use>
+									<button class="search-form__submit  search-form__submit--svg" type="submit" name="search" title="найти">
+										<svg class="search-form__submit-svg" id="search" viewBox="0 0 24 24" width="100%" height="100%">
+											<path
+												d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+											</path>
 										</svg>
 									</button>
-									<div class="search-setting__options">
-										<div id="search-full" class="search-full">
-											<div class="search-full__col">
-												<div class="search-full__title">Вид результатов поиска:</div>
-												<div id="searchTemplate" class="search-full__template">
-													<input id="searchTemplateDefault" type="radio" name="st" value="default">
-													<label class="search-full__label" for="searchTemplateDefault">классический</label>
-													<input id="searchTemplateGroups" type="radio" name="st" value="groups" checked="checked">
-													<label class="search-full__label" for="searchTemplateGroups">сгруппированный</label>
-												</div>
-												<div class="search-full__smode">
-													<input type="checkbox" name="chk_smode" class="search-full__chk-smode" id="chk_smode" checked="checked">
-													<label class="search-full__smode-label" for="chk_smode">Искать аналоги</label>
-												</div>
-												<input type="hidden" name="smode" id="smode" value="A">
-												<input type="hidden" name="sort___search_results_by" id="sort___search_results_by" value="final_price">
-											</div>
-
-											<div class="search-full__col">
-												<div class="search-full__title">Срок поставки:</div>
-												<div class="search-full__term-select">
-													<select id="term" name="term">
-														<option value="0">не важен</option>
-														<option value="10">до 10 дней</option>
-														<option value="8">до 8-ми дней</option>
-														<option value="5">до 5 дней</option>
-														<option value="3">до 3-х дней</option>
-														<option value="1">1 день</option>
-													</select>
-												</div>
+								</div>
+								<div class="search-form__live">
+									<div class="search-live" id="vue-search-autocomplete" style="display: none;">
+										<div v-show="loading" id="loading_search"></div>
+										<div class="search-live__scroll" v-if="showResults &amp;&amp; searchResultsProcessed.length"
+											v-on-click-outside="clickOutside">
+											<div class="search-live__inner">
+												<table class="search-live__table">
+													<tbody>
+														<tr class="search-live__row" v-for="item in searchResultsProcessed"
+															v-on:click="ajaxSearch(item.indexId)">
+															<template
+																v-if="item.source === &#39;more&#39; || item.source === &#39;vin&#39; || item.source === &#39;vin2&#39;"></template>
+															<template v-else=""></template>
+														</tr>
+													</tbody>
+												</table>
 											</div>
 										</div>
 									</div>
 								</div>
-								<button class="search-form__submit  search-form__submit--svg" type="submit" name="search" title="найти">
-<svg class="search-form__submit-svg" id="search" viewBox="0 0 24 24" width="100%" height="100%">
-	<path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
-</svg>
-								</button>
+							</form>
+							<div class="header-catalog__right">
+								<!--  -->
+								<a class="order-amount header-catalog__basket" href="/shop/basket.html" data-field="module-basket">
+									<span class="image__container">
+										<img src="img/cart.svg" alt="cart">
+									</span>
+									<span class="order-amount__count" data-field="module-basket-count">0</span>
+									<span class="hidden-xs basket-sum">
+										<span data-field="module-basket-sum">0.00</span>
+										<span class="order-amount__unit">грн.</span>
+									</span>
+								</a>
 							</div>
-							<div class="search-form__live">
-								<div class="search-live" id="vue-search-autocomplete" style="display: none;">
-									<div v-show="loading" id="loading_search"></div>
-									<div class="search-live__scroll" v-if="showResults &amp;&amp; searchResultsProcessed.length"
-									 v-on-click-outside="clickOutside">
-										<div class="search-live__inner">
-											<table class="search-live__table">
-												<tbody>
-													<tr class="search-live__row" v-for="item in searchResultsProcessed" v-on:click="ajaxSearch(item.indexId)">
-														<template v-if="item.source === &#39;more&#39; || item.source === &#39;vin&#39; || item.source === &#39;vin2&#39;"></template>
-														<template v-else=""></template>
-													</tr>
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</div>
-							</div>
-						</form>
-						<div class="header-catalog__right">
-							<!--  -->
-							<a class="order-amount header-catalog__basket" href="/shop/basket.html" data-field="module-basket">
-								<span class="image__container">
-									<img src="img/cart.svg" alt="cart">
-								</span>
-								<span class="order-amount__count" data-field="module-basket-count">0</span>
-								<span class="hidden-xs basket-sum">
-									<span data-field="module-basket-sum">0.00</span>
-									<span class="order-amount__unit">грн.</span>
-								</span>
-							</a>
 						</div>
 					</div>
 				</div>
 			</div>
+			
+			<div class="header-nav__menu hidden-xs">
+				<!--Begin Основное меню-->
+				<ul class="top-nav">
+					<li class="top-nav__item top-nav__item--sub">
+						<a class="top-nav__link" href="/#">Новым клиентам</a>
+						<ul class="top-menu-sub">
+			
+							<li class="top-menu-sub__item">
+								<a class="top-menu-sub__link" href="/how-to-search-part/">Как найти деталь</a>
+							</li>
+			
+							<li class="top-menu-sub__item">
+								<a class="top-menu-sub__link" href="/how-to-order/">Как сделать заказ</a>
+							</li>
+			
+							<li class="top-menu-sub__item last">
+								<a class="top-menu-sub__link" href="/wholesale/">Скидки для СТО и магазинов</a>
+							</li>
+						</ul>
+					</li>
+					<li class="top-nav__item">
+						<a class="top-nav__link" href="/pay/">Оплата</a>
+					</li>
+					<li class="top-nav__item">
+						<a class="top-nav__link" href="/delivery/">Доставка</a>
+					</li>
+					<li class="top-nav__item">
+						<a class="top-nav__link" href="/about/news/">Новости</a>
+					</li>
+					<li class="top-nav__item top-nav__item--sub">
+						<a class="top-nav__link" href="/manuals/">Инструкции</a>
+						<ul class="top-menu-sub">
+			
+							<li class="top-menu-sub__item">
+								<a class="top-menu-sub__link" href="/ustanovka-remkomplekta-single-vanos/">Как купить</a>
+							</li>
+			
+							<li class="top-menu-sub__item">
+								<a class="top-menu-sub__link" href="/ustanovka-remkomplekta-double-vanos/">Как оплатить</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!--End Основное меню-->
+			</div>
 		</div>
 
-		<div class="header-nav__menu hidden-xs">
-			<!--Begin Основное меню-->
-			<ul class="top-nav">
-				<li class="top-nav__item top-nav__item--sub">
-					<a class="top-nav__link" href="/#">Новым клиентам</a>
-					<ul class="top-menu-sub">
-
-						<li class="top-menu-sub__item">
-							<a class="top-menu-sub__link" href="/how-to-search-part/">Как найти деталь</a>
-						</li>
-
-						<li class="top-menu-sub__item">
-							<a class="top-menu-sub__link" href="/how-to-order/">Как сделать заказ</a>
-						</li>
-
-						<li class="top-menu-sub__item last">
-							<a class="top-menu-sub__link" href="/wholesale/">Скидки для СТО и магазинов</a>
-						</li>
-					</ul>
-				</li>
-				<li class="top-nav__item">
-					<a class="top-nav__link" href="/pay/">Оплата</a>
-				</li>
-				<li class="top-nav__item">
-					<a class="top-nav__link" href="/delivery/">Доставка</a>
-				</li>
-				<li class="top-nav__item">
-					<a class="top-nav__link" href="/about/news/">Новости</a>
-				</li>
-				<li class="top-nav__item top-nav__item--sub">
-					<a class="top-nav__link" href="/manuals/">Инструкции</a>
-					<ul class="top-menu-sub">
-
-						<li class="top-menu-sub__item">
-							<a class="top-menu-sub__link" href="/ustanovka-remkomplekta-single-vanos/">Как купить</a>
-						</li>
-
-						<li class="top-menu-sub__item">
-							<a class="top-menu-sub__link" href="/ustanovka-remkomplekta-double-vanos/">Как оплатить</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
-			<!--End Основное меню-->
-		</div>
+		
 
 		<div id="breadcrumbs-line" class="breadcrumbs-line" style="display: none">
 			<div class="container">

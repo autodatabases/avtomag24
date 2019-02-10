@@ -50,6 +50,14 @@
   color: #dadada;
 }
 
+.header-nav {
+  padding: 30px 0;
+  background-size: 20% 140%;
+  background-position: 0px -78px;
+  background-image: url(../img/gear.svg);
+  background-repeat: no-repeat;
+}
+
 .search-form__container {
   background-color: unset;
   border-bottom: 3px solid #e02e2e;
@@ -138,8 +146,8 @@ input[type="radio"] + label::before {
 }
 
 .header {
-  -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 2px 16px rgba(0, 0, 0, 0.37);
+          box-shadow: 0 2px 16px rgba(0, 0, 0, 0.37);
   background-color: #272a2a;
 }
 
@@ -235,9 +243,9 @@ input[type="radio"] + label::before {
 }
 
 .header-catalog__wrapper {
-  -webkit-box-align: unset;
-  -ms-flex-align: unset;
-  align-items: unset;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding-right: 0;
@@ -320,6 +328,7 @@ input[type="radio"] + label::before {
 .header-catalog__right span {
   color: #3d4059;
   font-size: 16px;
+  font-weight: 500;
 }
 
 .order-amount {
@@ -350,7 +359,7 @@ input[type="radio"] + label::before {
   }
   .order-amount__count {
     left: 34px;
-    margin-top: -24px;
+    margin-top: 0;
   }
   .header-catalog__wrapper {
     min-height: 78px;
@@ -364,9 +373,12 @@ input[type="radio"] + label::before {
   min-width: 15px;
   height: 15px;
   width: 15px;
-  padding: 3px 4px 2.5px;
-  background-color: #3d4058;
+  border-radius: 0;
+  padding: 4px;
+  background-color: #e02e2d;
   font-weight: 500;
+  margin-top: 0;
+  top: 0;
 }
 
 .garage__container:hover, .menu-catalog__btn:hover {
@@ -391,16 +403,6 @@ input[type="radio"] + label::before {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.buttons__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin-top: 20px;
 }
 
 .header-catalog__menu {
@@ -515,6 +517,7 @@ input[type="radio"] + label::before {
   justify-content: center;
   max-width: 87%;
   margin: 0 auto;
+  padding-top: 5px;
   border-top: 1px solid #e4e5e6;
 }
 
@@ -534,16 +537,11 @@ input[type="radio"] + label::before {
 .top-nav__link {
   color: #3d4059;
   font-size: 16px;
-  padding-bottom: 10px;
   display: inline-block;
 }
 
 .top-menu-sub {
   border-top: transparent;
-  -webkit-box-shadow: 0 0 30px rgba(98, 99, 103, 0.37);
-  box-shadow: 0 0 30px rgba(98, 99, 103, 0.37);
-  top: 35px;
-  left: -9px;
 }
 
 #navbar {
@@ -566,12 +564,19 @@ input[type="radio"] + label::before {
   box-shadow: 0 3px 16px #90909070;
 }
 
-.footer, .payment-methods__item {
-  background-color: #e8ebf0;
+#navbar .logo_navbar {
+  font-size: 33px;
+  font-weight: 700;
+  padding: 0 20px;
+}
+
+.footer {
+  background-color: #f6f6f6;
 }
 
 #navbar .header-catalog__wrapper {
   padding-right: 15px;
+  min-height: unset;
 }
 
 #navbar .search-form {
@@ -598,11 +603,6 @@ input[type="radio"] + label::before {
   margin-top: 0;
   margin-left: 10px;
   margin-right: 15px;
-}
-
-.footer__container {
-  padding-top: 25px;
-  padding-bottom: 5px;
 }
 
 .footer__logo img {
@@ -672,7 +672,7 @@ footer .contact-details__value a {
 }
 
 .footer__bottom {
-  background-color: #e2e5ea;
+  background-color: #272a2a;
   padding: 3px;
 }
 
@@ -732,7 +732,7 @@ input[type="radio"] + label.select-stock-point__label::after, input[type="radio"
   content: "";
   width: 5px;
   height: 5px;
-  background-color: #0099d2;
+  background-color: #272a2a;
   position: absolute;
   left: -15px;
   border-radius: 30px;
@@ -827,7 +827,7 @@ input[type="radio"] + label.select-stock-point__label::after, input[type="radio"
 }
 
 @media (max-width: 768px) {
-  .buttons__container, .footer__payments, .logo_navbar img, .orders__container {
+  .footer__payments, .logo_navbar img, .orders__container {
     display: none;
   }
   .order-amount {
@@ -1502,7 +1502,6 @@ button, input, optgroup, select, textarea {
 .owl-next, .owl-prev {
   width: 50px;
   height: 50px;
-  border-radius: 100px;
   background-color: rgba(216, 216, 216, 0.26);
   margin: -25px 15px 0;
 }
