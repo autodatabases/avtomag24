@@ -1603,6 +1603,14 @@ button, input, optgroup, select, textarea {
   content: none;
 }
 
+.list-catalog-tile__item:hover {
+  border: 1px solid #888888;
+}
+
+.list-catalog-tile__item:hover .list-catalog-tile__content {
+  background-color: #fff;
+}
+
 .list-catalog-tile__content {
   position: absolute;
   bottom: 0;
@@ -1611,6 +1619,8 @@ button, input, optgroup, select, textarea {
   right: 0;
   text-align: center;
   padding: 8px;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .list-catalog-tile__image {
