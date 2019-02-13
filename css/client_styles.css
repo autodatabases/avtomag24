@@ -775,15 +775,6 @@ input[type="radio"] + label.select-stock-point__label::after, input[type="radio"
   border: none;
 }
 
-.mobile-menu__link, .mobile-nav__btn, .mobile-nav__btn-account {
-  border-radius: 100px;
-}
-
-.mobile-nav__btn {
-  margin-right: 10px;
-  color: #fff;
-}
-
 .mobile-menu__link {
   background-color: #fff;
   -webkit-box-shadow: 0 0 20px #d5d9de63;
@@ -1320,11 +1311,6 @@ span.text-nowrap.test {
   margin-right: 5px;
 }
 
-.btn_view_common {
-  border-color: #0099d1;
-  background-color: #0099d1;
-}
-
 .modal-content {
   border-radius: 20px;
 }
@@ -1467,8 +1453,12 @@ button, input, optgroup, select, textarea {
 }
 
 .accordion-tabs__area .accordion-tab {
-  border: 1px solid #e0dfdf;
   background-color: #f6f6f6;
+}
+
+.brand-catalog-list__wrapper {
+  -webkit-column-count: 9;
+          column-count: 9;
 }
 
 .brand-catalog-list__list {
@@ -1641,6 +1631,10 @@ button, input, optgroup, select, textarea {
   transform: none;
 }
 
+.last-news {
+  padding: 0;
+}
+
 .last-news__header {
   background-color: #f6f6f6;
   padding: 7px 20px;
@@ -1659,19 +1653,14 @@ button, input, optgroup, select, textarea {
 }
 
 .last-news__item {
-  margin-bottom: 25px;
-}
-
-.last-news__item:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  height: 1px;
-  width: 90%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  bottom: -10px;
-  background-color: #b8b9c1;
+  margin: 10px;
+  padding: 20px;
+  width: 300px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: 500px;
+  background-color: #ededed;
 }
 
 .last-news__list {
@@ -1679,6 +1668,13 @@ button, input, optgroup, select, textarea {
   margin: 0;
   margin-bottom: 25px;
   background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .last-news__date {

@@ -719,13 +719,6 @@ input[type="radio"] + label.select-stock-point__label
   border-radius: 10px
   border: none
 
-.mobile-menu__link, .mobile-nav__btn, .mobile-nav__btn-account
-  -webkit-border-radius: 100px
-  border-radius: 100px
-
-.mobile-nav__btn
-  margin-right: 10px
-  color: #fff
 
 .mobile-menu__link
   background-color: #fff
@@ -1199,10 +1192,6 @@ span.text-nowrap.test
 .navbar-push__inner .contact-details__item img
   margin-right: 5px
 
-.btn_view_common
-  border-color: #0099d1
-  background-color: #0099d1
-
 .modal-content
   -webkit-border-radius: 20px
   border-radius: 20px
@@ -1319,8 +1308,10 @@ button, input, optgroup, select, textarea
 
 .accordion-tabs__area
   .accordion-tab
-    border: 1px solid #e0dfdf
     background-color: #f6f6f6
+
+.brand-catalog-list__wrapper
+  column-count: 9
 
 .brand-catalog-list__list
   border-left: 2px solid #c82621
@@ -1469,6 +1460,9 @@ button, input, optgroup, select, textarea
   -ms-transform: none
   transform: none
 
+.last-news
+  padding: 0
+
 .last-news__header
   background-color: #f6f6f6
   padding: 7px 20px
@@ -1482,26 +1476,25 @@ button, input, optgroup, select, textarea
   background-color: #e8e8e8
   color: #000
   border-radius: 3px
+  
 
 
 .last-news__item
-  margin-bottom: 25px
-  &:not(:last-child)::after
-    content: ''
-    position: absolute
-    height: 1px
-    width: 90%
-    left: 0
-    right: 0
-    margin: 0 auto
-    bottom: -10px
-    background-color: #b8b9c1
+  margin: 10px
+  padding: 20px
+  width: 300px
+  flex-grow: 1
+  max-width: 500px
+  background-color: #ededed
 
 .last-news__list
   padding: 10px 5px
   margin: 0
   margin-bottom: 25px
   background-color: #f6f6f6
+  display: flex
+  justify-content: space-around
+  flex-wrap: wrap
 
 .last-news__date
   display: table
