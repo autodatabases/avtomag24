@@ -1,17 +1,51 @@
-// .header
-//   background-color: #272a2a
-//   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5)
-// .contact-details_top
-//   color: #dedede
+.sidebar
+  display: flex
+  position: fixed
+  left: 0
+  top: 0
+  width: 80px
+  height: 100%
+  bottom: 0
+  overflow: hidden
+  z-index: 999
+  background-color: #f7f7f7
+  align-items: center
+  justify-content: center
+  text-align: center
+  box-shadow: inset -2px 0px #ededed
+  .sidebar__container
+    padding: 40px 0
+    max-width: 100%
+    .sidebar__item
+      margin: 20px 0
+    img
+      width: 60%
+      max-width: 70%
+    p
+      color: #888
+      font-size: 12px
+      white-space: normal
+      overflow: hidden
+      text-overflow: ellipsis
+      max-width: 100%
+      padding: 5px
+    
+
+#page
+  padding-left: 80px
+.header__wrapper
+  padding: 0
+
 .header__user-info
   .btn
     background-color: unset
     border: none
     position: relative
     &:first-child
-      color: #dadada
+      color: #272a2a
+      text-shadow: none
       &:hover
-        color: #fff
+        // color: #fff
         &::before
           bottom: 7px
       &::before,
@@ -38,7 +72,9 @@
         top: 0
         bottom: 0
 .header__reg-button
-  color: #dadada
+  color: #272a2a
+  &:hover
+    color: #000
 
 .header-nav
   padding: 30px 0
@@ -151,15 +187,15 @@ input
 
 .header
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.37);
-  background-color: #272a2a
+  // background-color: #272a2a
 
 .contact-details_top
-  color: #d4d4d4
+  color: #272a2a
   width: 96%
   -webkit-box-pack: justify
   -ms-flex-pack: justify
-  -webkit-justify-content: space-between
-  justify-content: space-between
+  -webkit-justify-content: space-around
+  justify-content: space-around
 
 .contact-details__value
   margin: auto auto auto 0
@@ -179,8 +215,14 @@ input
   height: 35px
   width: 35px
   padding: 9px
-.select-stock-point__show-icon
-  fill: #d8d8d8
+
+p.contact-details__icon
+  font-weight: 600
+  color: #e02e2e
+  font-size: 16px
+  text-align: center
+  vertical-align: middle
+
 
 .header-nav__user-info .btn
   -webkit-border-radius: 60px
@@ -194,7 +236,7 @@ input
   .btn, .submitButton
     margin: auto auto auto 10px
     height: 35px
-    padding: 7px 20px
+    padding: 7px 15px
     border: none
 
 
@@ -224,6 +266,8 @@ input
 @media only screen and (min-width: 1024px)
   .header-nav__img, .header-nav__picture
     max-height: 145px
+  .brand-catalog-list__wrapper
+    column-count: 7
 
 @media only screen and (min-width: 1025px)
   .header-nav
@@ -517,7 +561,7 @@ input
   background-color: #fff
   position: fixed
   top: -80px
-  width: 100%
+  width: calc(100% - 80px)
   -webkit-transition: top 0.3s
   -o-transition: top 0.3s
   transition: top 0.3s
@@ -1465,7 +1509,7 @@ button, input, optgroup, select, textarea
 
 .last-news__header
   background-color: #f6f6f6
-  padding: 7px 20px
+  padding: 7px 15px
   margin: 0 0 15px
 
 .last-news__title
@@ -1484,7 +1528,7 @@ button, input, optgroup, select, textarea
   padding: 20px
   width: 300px
   flex-grow: 1
-  max-width: 500px
+  max-width: 400px
   background-color: #ededed
 
 .last-news__list
@@ -1493,7 +1537,7 @@ button, input, optgroup, select, textarea
   margin-bottom: 25px
   background-color: #f6f6f6
   display: flex
-  justify-content: space-around
+  justify-content: flex-start
   flex-wrap: wrap
 
 .last-news__date
