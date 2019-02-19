@@ -84,9 +84,11 @@ $no_text_pages = ['/search.html', '/', '/registration.html', '/activation.html',
 	
 
 <div class="header-nav__menu">
+	<div class="container">
 	<!--Begin Основное меню-->
 	<? NavigationPart("main_menu", PHP_DataRender::includeTemplatePath("/content/tpl.main_menu.php", false), "DR_PHP"); ?>
 	<!--End Основное меню-->
+	</div>
 </div>
 
 	<div id="breadcrumbs-line" class="breadcrumbs-line" <? if (in_array($_SYSTEM->REQUESTED_PAGE, array('/', '/error404.html'))) { ?> style="display: none" <? } ?>>
