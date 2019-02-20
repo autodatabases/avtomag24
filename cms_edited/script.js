@@ -438,13 +438,24 @@ jqWar(document).ready(function () {
 		new UserMenu(userMenuContainers[i]);
 	}
 
-	document.querySelector(".auth-user__hello").innerHTML = "Личный кабинет";
 
 	new Ccatalogs();
 
 	jqWar('#myModal').on('shown.bs.modal', function () {
 		jqWar('#login').find('#userlogin').focus()
 	})
+
+	// user scripts
+	if (document.getElementById("main-page")){
+		document.querySelector(".auth-user__hello").innerHTML = "Личный кабинет";
+
+		null === document.querySelector(".categories .list-catalog-tile__item") && (document.querySelector(".categories .section__title").style.display = "none");
+
+		null === document.querySelector(".last-news__item") && (document.querySelector(".last-news .section__title").style.display = "none");
+
+		-1 == document.querySelector(".about-us .about__text").innerHTML.indexOf("word") && (document.querySelector(".about-us").style.display = "none");
+	}
+	// end user scripts
 
 });
 
