@@ -446,8 +446,11 @@ jqWar(document).ready(function () {
 	})
 
 	// user scripts
-	if (document.getElementById("main-page")){
+
+	if (document.querySelector(".auth-user__hello")) {
 		document.querySelector(".auth-user__hello").innerHTML = "Личный кабинет";
+	}
+	if (document.getElementById("main-page")){
 
 		null === document.querySelector(".categories .list-catalog-tile__item") && (document.querySelector(".categories .section__title").style.display = "none");
 
