@@ -494,14 +494,17 @@ footer .contact-details__value a {
 }
 
 .footer__logo img {
-  max-width: 200px
+    max-width: 260px;
+    width: 100%;
 }
 
 .contact-details_footer .contact-details__icon {
   fill: #f6f6f6;
   background-color: #000;
   border-right: 2px solid #e02e2e;
-  margin-right: 20px
+  margin-right: 20px;
+  width: 37px;
+  height: 37px;
 }
 
 .footer__menu {
