@@ -1,3 +1,13 @@
+.wrapper {
+  padding-left: 110px;
+}
+
+.container {
+  width: 100% !important;
+  max-width: 1300px;
+}
+
+
 .header__wrapper {
   padding: 0
 }
@@ -60,17 +70,33 @@
   padding: 30px 0
 } */
 
-.header-nav__wrapper {
+/* .header-nav__wrapper {
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
+} */
+
+.header-nav__logo {
+  position: relative;
+}
+
+.header-nav__logo::before {
+  content: '';
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: url(../images/svg/engine.svg) no-repeat;
+  background-size: contain;
+  z-index: -343;
+  top: -110px;
+  left: -23px;
 }
 
 
 .search-form__container {
   background-color: unset;
-  border-bottom: 2px solid #e02e2e
+  border-bottom: 3px solid #e02e2e
 }
 
 .search-form__input,
@@ -81,7 +107,7 @@ input[type=text].search-form__input {
 }
 
 .search-form_focus .search-form__container {
-  border-bottom: 2px solid #333;
+  border-bottom: 3px solid #333;
   -webkit-box-shadow: none;
   box-shadow: none
 }
@@ -255,7 +281,9 @@ p.contact-details__icon {
   background-color: #fff !important;
   padding-right: 20px;
   -webkit-box-shadow: 0 3px 20px #40404069;
-  box-shadow: 0 3px 20px #40404069
+  box-shadow: 0 3px 20px #40404069;
+    width: calc(100% - 110px);
+    margin-left: 110px;
 }
 
 .header-catalog__wrapper {
@@ -303,9 +331,18 @@ p.contact-details__icon {
   margin-top: 5px
 }
 
+.user-search-history__list {
+    background-color: #fff;
+    box-shadow: 0 0 12px #3c383838;
+}
+
+.user-search-history__link {
+  color: #000000;
+    border-bottom: 1px solid #e32c26;
+}
+ƒ
 .search-form__input,
 input[type=text].search-form__input {
-  padding-left: 55px;
   text-align: center
 }
 
@@ -314,10 +351,7 @@ input[type=text].search-form__input {
 }
 
 .search-full {
-  right: -60px;
-  border: none;
-  -webkit-border-radius: 15px;
-  border-radius: 15px
+  right: -57px;
 }
 
 .search-full::before {
@@ -1022,7 +1056,12 @@ textarea {
   background-color: #f7f7f7;
   border-right: 2px solid #ededed;
   z-index: 30;
-  display: none;
+  transition: .15s;
+  /* display: none; */
+}
+
+.sidebar:hover {
+  width: 200px;
 }
 
 .sidebar .sidebar__title {
@@ -1068,13 +1107,20 @@ textarea {
 
 .sidebar .menu-catalog__item {
   cursor: pointer;
-  padding: 11px 3px;
-  margin: 40px 0;
+  padding: 0;
+  margin: 30px 0;
   border: 1px solid #b3b3b3;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   text-align: center;
   position: relative;
+    border-bottom: 3px solid #c7c7c7;
+    background-color: #eaeaea;
+    transition: .3s;
+}
+
+.sidebar .menu-catalog__item:hover {
+    background-color: #f3f3f3;
 }
 
 .sidebar .menu-catalog-sub__link,
@@ -1084,6 +1130,7 @@ textarea {
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   overflow: hidden;
+    padding: 11px 3px;
 }
 
 .sidebar .menu-catalog__item:hover .menu-catalog-sub {
@@ -1091,6 +1138,8 @@ textarea {
   -webkit-box-shadow: 3px -1px 20px #5d535336;
   box-shadow: 3px -1px 20px #5d535336;
   min-height: unset;
+    background-color: #f7f7f7;
+    border-right: 4px solid #d4d4d4;
 }
 
 .sidebar .menu-catalog-sub__item .menu-catalog-sub__link {
@@ -1119,10 +1168,10 @@ textarea {
 
 @media only screen and (min-width:1024px) {
 
-  /* .header-nav__img,
+  .header-nav__img,
   .header-nav__picture {
     max-height: 145px
-  } */
+  }
 
   .top-nav {
     -webkit-justify-content: center;
@@ -1164,10 +1213,10 @@ textarea {
     padding: 10px 0 30px
   }
 
-  /* .header-nav__img,
+.header-nav__img,
   .header-nav__picture {
     max-height: 110px
-  } */
+  }
 }
 
 @media (min-width:768px) and (max-width:1024px) {
@@ -1183,12 +1232,29 @@ textarea {
   }
 }
 
+@media (max-width: 992px) {
+    .wrapper {
+      padding-left: 0;
+    }
+
+    .sidebar {
+      display: none;
+    }
+    .header-catalog__panel--fixed {
+        width: 100%;
+        margin-left: 0
+    }
+}
+
 @media (max-width:768px) {
+
+  .header-nav__logo::before {
+    display: none;
+  }
 
   .search-form__input,
   input[type=text].search-form__input {
     font-size: 16px;
-    padding-left: 10px;
     height: 44px
   }
 
