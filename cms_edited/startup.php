@@ -18,8 +18,6 @@
 		</div>
 	</div>
 	<div class="last-news col-xs-12 col-sm-12 col-md-12">
-	<p class="section__title">Последние новости
-	<a class="last-news__all" href="/about/news/">Все новости</a></p>
 		<!--Begin Последние новости-->
 		<? NavigationPart("news", PHP_DataRender::includeTemplatePath("/content/tpl.news-startup.php", false), "DR_PHP"); ?>
 		<!--End Последние новости-->

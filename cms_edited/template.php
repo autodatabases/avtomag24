@@ -66,7 +66,6 @@ $no_text_pages = ['/search.html', '/', '/registration.html', '/activation.html',
 						<div class="header-catalog">
 							<div class="header-catalog__panel">
 								<div class="col-xs-12 header-catalog__wrapper">
-									<? NavigationPart("catalogs-menu-inner", PHP_DataRender::includeTemplatePath("/content/tpl.menu_catalogs.php", false), "DR_PHP"); ?>
 									<?= Loader::callModule('ClientSearchForm') ?>
 								<div class="header-catalog__right">
 								
@@ -193,6 +192,13 @@ $no_text_pages = ['/search.html', '/', '/registration.html', '/activation.html',
 	</footer>
 
 </div>
+
+<aside class="sidebar">
+	<div class="sidebar__container">
+		<p class="sidebar__title">Каталоги<br>товаров</p>
+		<? NavigationPart("catalogs-menu-inner", PHP_DataRender::includeTemplatePath("/content/tpl.menu_catalogs.php", false), "DR_PHP"); ?>
+		</div>
+</aside>
 
 <div class="container-push">
 	<?
