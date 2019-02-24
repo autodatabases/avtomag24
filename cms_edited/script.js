@@ -454,9 +454,7 @@ jqWar(document).ready(function () {
 
 		null === document.querySelector(".categories .list-catalog-tile__item") && (document.querySelector(".categories .section__title").style.display = "none");
 
-		null === document.querySelector(".last-news__item") && (document.querySelector(".last-news .section__title").style.display = "none");
-
-		-1 == document.querySelector(".about-us .about__text").innerHTML.indexOf("word") && (document.querySelector(".about-us").style.display = "none");
+		document.querySelector(".about-us .about__text").innerHTML < 10 && (document.querySelector(".about-us").style.display = "none");
 	}
 	// end user scripts
 
