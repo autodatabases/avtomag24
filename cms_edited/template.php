@@ -33,6 +33,7 @@ $no_text_pages = ['/search.html', '/', '/registration.html', '/activation.html',
 			<div class="row">
 				<div class="col-xs-12 header__wrapper">
 					<div class="header__contact-wrapper">
+						<? ContentPart('languages-block'); ?>
 						<?= Loader::callModule('SelectStockPoint'); ?>
 					</div>
 					<div class="header__right-wrapper">
@@ -195,7 +196,7 @@ $no_text_pages = ['/search.html', '/', '/registration.html', '/activation.html',
 
 <aside class="sidebar">
 	<div class="sidebar__container">
-		<p class="sidebar__title">Каталоги<br>товаров</p>
+		<!-- <p class="sidebar__title">Каталоги<br>товаров</p> -->
 		<? NavigationPart("catalogs-menu-inner", PHP_DataRender::includeTemplatePath("/content/tpl.menu_catalogs.php", false), "DR_PHP"); ?>
 		</div>
 </aside>

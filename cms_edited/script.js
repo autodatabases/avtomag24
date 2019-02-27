@@ -447,15 +447,21 @@ jqWar(document).ready(function () {
 
 	// user scripts
 
-	if (document.querySelector(".auth-user__hello")) {
-		document.querySelector(".auth-user__hello").innerHTML = "Личный кабинет";
-	}
+	jqWar('.auth-user__hello').html('Личный кабинет');
+
 	if (document.getElementById("main-page")){
 
 		null === document.querySelector(".categories .list-catalog-tile__item") && (document.querySelector(".categories .section__title").style.display = "none");
 
 		document.querySelector(".about-us .about__text").innerHTML < 10 && (document.querySelector(".about-us").style.display = "none");
+
+		// if (document.querySelector(".sidebar .menu-catalog__item") === null) { document.querySelector(".sidebar").style.display = 'none'; document.querySelector(".wrapper").style.paddingLeft = '0'; document.querySelector(".header-catalog__panel--fixed").style.width = '100%'; document.querySelector(".header-catalog__panel--fixed").style.marginLeft = '0'; }
 	}
+
+
+	// if (document.querySelector(".search-data__form")) {
+	// if (document.querySelector('.search-col.search-col__term').innerText == "1 дн.") { document.querySelector('.search-col.search-col__term').innerHTML = "завтра" }
+	// }
 	// end user scripts
 
 });
